@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://kashique.in/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://kashique.in/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://kashique.in/collections/top.atom"/>
+  <title>kashique_shop</title>
+  <updated>2025-06-24T02:55:38-04:00</updated>
+  <author>
+    <name>kashique_shop</name>
+  </author>
+  <entry>
+    <id>https://kashique.in/products/10190358184220</id>
+    <published>2025-06-24T02:55:38-04:00</published>
+    <updated>2025-06-24T02:55:38-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://kashique.in/products/sandline-top"/>
+    <title>Sandline Top</title>
+    <s:type></s:type>
+    <s:vendor>kashique_shop</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0927/9671/5292/files/98C17CFE-915A-4B7B-B716-09FC3D980233_62ef1c41-58d7-4389-acf9-ab2fc7464403.jpg?v=1751358143"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>kashique_shop<br>
+        <strong>Type: </strong><br>
+        <strong>Price: </strong>
+            1500.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p><strong></strong><br><br></p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://kashique.in/products/10190358184220</id>
+      <title>XS</title>
+      <s:price currency="INR">1500.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10190358184220</id>
+      <title>S</title>
+      <s:price currency="INR">1500.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10190358184220</id>
+      <title>M</title>
+      <s:price currency="INR">1500.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10190358184220</id>
+      <title>L</title>
+      <s:price currency="INR">1500.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10190358184220</id>
+      <title>XL</title>
+      <s:price currency="INR">1500.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10190358184220</id>
+      <title>2XL</title>
+      <s:price currency="INR">1500.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+</feed>

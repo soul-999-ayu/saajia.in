@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://kashique.in/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://kashique.in/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://kashique.in/collections/dress.atom"/>
+  <title>kashique_shop</title>
+  <updated>2025-06-20T04:49:56-04:00</updated>
+  <author>
+    <name>kashique_shop</name>
+  </author>
+  <entry>
+    <id>https://kashique.in/products/10188314444060</id>
+    <published>2025-06-20T04:49:56-04:00</published>
+    <updated>2025-06-20T04:49:56-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://kashique.in/products/lemon-soul-dress"/>
+    <title>Lemon Soul Dress</title>
+    <s:type></s:type>
+    <s:vendor>kashique_shop</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0927/9671/5292/files/2F9A9864.jpg?v=1751963890"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>kashique_shop<br>
+        <strong>Type: </strong><br>
+        <strong>Price: </strong>
+            2450.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://kashique.in/products/10188314444060</id>
+      <title>XS</title>
+      <s:price currency="INR">2450.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10188314444060</id>
+      <title>S</title>
+      <s:price currency="INR">2450.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10188314444060</id>
+      <title>M</title>
+      <s:price currency="INR">2450.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10188314444060</id>
+      <title>L</title>
+      <s:price currency="INR">2450.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10188314444060</id>
+      <title>XL</title>
+      <s:price currency="INR">2450.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10188314444060</id>
+      <title>XXL</title>
+      <s:price currency="INR">2450.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://kashique.in/products/10188313166108</id>
+    <published>2025-06-20T04:48:32-04:00</published>
+    <updated>2025-06-20T04:48:32-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://kashique.in/products/cherry-line-dress"/>
+    <title>Cherry Line Dress</title>
+    <s:type></s:type>
+    <s:vendor>kashique_shop</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0927/9671/5292/files/2F9A9789.jpg?v=1751357855"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>kashique_shop<br>
+        <strong>Type: </strong><br>
+        <strong>Price: </strong>
+            2450.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://kashique.in/products/10188313166108</id>
+      <title>XS</title>
+      <s:price currency="INR">2450.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10188313166108</id>
+      <title>S</title>
+      <s:price currency="INR">2450.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10188313166108</id>
+      <title>M</title>
+      <s:price currency="INR">2450.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10188313166108</id>
+      <title>L</title>
+      <s:price currency="INR">2450.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10188313166108</id>
+      <title>XL</title>
+      <s:price currency="INR">2450.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10188313166108</id>
+      <title>2XL</title>
+      <s:price currency="INR">2450.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://kashique.in/products/10188303139100</id>
+    <published>2025-06-20T04:37:17-04:00</published>
+    <updated>2025-06-20T04:37:17-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://kashique.in/products/matcha-dress"/>
+    <title>Matcha Dress</title>
+    <s:type></s:type>
+    <s:vendor>kashique_shop</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0927/9671/5292/files/2F9A9892.jpg?v=1751358209"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>kashique_shop<br>
+        <strong>Type: </strong><br>
+        <strong>Price: </strong>
+            2850.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://kashique.in/products/10188303139100</id>
+      <title>XS</title>
+      <s:price currency="INR">2850.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10188303139100</id>
+      <title>S</title>
+      <s:price currency="INR">2850.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10188303139100</id>
+      <title>M</title>
+      <s:price currency="INR">2850.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10188303139100</id>
+      <title>L</title>
+      <s:price currency="INR">2850.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10188303139100</id>
+      <title>XL</title>
+      <s:price currency="INR">2850.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10188303139100</id>
+      <title>2XL</title>
+      <s:price currency="INR">2850.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://kashique.in/products/10188301566236</id>
+    <published>2025-06-20T04:35:22-04:00</published>
+    <updated>2025-06-20T04:35:22-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://kashique.in/products/spot-on-dress"/>
+    <title>Spot On Dress</title>
+    <s:type></s:type>
+    <s:vendor>kashique_shop</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0927/9671/5292/files/2F9A9971.jpg?v=1751358336"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>kashique_shop<br>
+        <strong>Type: </strong><br>
+        <strong>Price: </strong>
+            2850.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://kashique.in/products/10188301566236</id>
+      <title>XS</title>
+      <s:price currency="INR">2850.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10188301566236</id>
+      <title>S</title>
+      <s:price currency="INR">2850.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10188301566236</id>
+      <title>M</title>
+      <s:price currency="INR">2850.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10188301566236</id>
+      <title>L</title>
+      <s:price currency="INR">2850.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10188301566236</id>
+      <title>XL</title>
+      <s:price currency="INR">2850.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10188301566236</id>
+      <title>2XL</title>
+      <s:price currency="INR">2850.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://kashique.in/products/10188299698460</id>
+    <published>2025-06-20T04:33:22-04:00</published>
+    <updated>2025-06-20T04:33:22-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://kashique.in/products/lunora-dress"/>
+    <title>Lunora Dress</title>
+    <s:type></s:type>
+    <s:vendor>kashique_shop</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0927/9671/5292/files/2F9A9700.jpg?v=1751358292"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>kashique_shop<br>
+        <strong>Type: </strong><br>
+        <strong>Price: </strong>
+            2250.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://kashique.in/products/10188299698460</id>
+      <title>XS</title>
+      <s:price currency="INR">2250.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10188299698460</id>
+      <title>S</title>
+      <s:price currency="INR">2250.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10188299698460</id>
+      <title>M</title>
+      <s:price currency="INR">2250.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10188299698460</id>
+      <title>L</title>
+      <s:price currency="INR">2250.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10188299698460</id>
+      <title>XL</title>
+      <s:price currency="INR">2250.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10188299698460</id>
+      <title>2XL</title>
+      <s:price currency="INR">2250.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+</feed>

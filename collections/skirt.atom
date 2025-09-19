@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://kashique.in/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://kashique.in/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://kashique.in/collections/skirt.atom"/>
+  <title>kashique_shop</title>
+  <updated>2025-06-24T02:51:14-04:00</updated>
+  <author>
+    <name>kashique_shop</name>
+  </author>
+  <entry>
+    <id>https://kashique.in/products/10190357758236</id>
+    <published>2025-06-24T02:51:14-04:00</published>
+    <updated>2025-06-24T02:51:14-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://kashique.in/products/azure-skirt"/>
+    <title>Azure Skirt</title>
+    <s:type></s:type>
+    <s:vendor>kashique_shop</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0927/9671/5292/files/2F9A9661_abc0bc65-5574-4503-949f-27d40d5754e7.jpg?v=1751357961"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>kashique_shop<br>
+        <strong>Type: </strong><br>
+        <strong>Price: </strong>
+            2000.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://kashique.in/products/10190357758236</id>
+      <title>XS</title>
+      <s:price currency="INR">2000.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10190357758236</id>
+      <title>S</title>
+      <s:price currency="INR">2000.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10190357758236</id>
+      <title>M</title>
+      <s:price currency="INR">2000.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10190357758236</id>
+      <title>L</title>
+      <s:price currency="INR">2000.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10190357758236</id>
+      <title>XL</title>
+      <s:price currency="INR">2000.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://kashique.in/products/10190357758236</id>
+      <title>2XL</title>
+      <s:price currency="INR">2000.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+</feed>
