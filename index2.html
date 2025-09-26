@@ -628,6 +628,26 @@ Shopify.routes.root = "index.html";</script>
   data-shs="true"
   data-shs-beacon="true"
 ></script>
+
+<style>
+  /* Apply this styling only on mobile screens */
+  @media (max-width: 990px) {
+    
+    /* This rule sets up the container */
+    header #mobile-header-container {
+      display: flex !important;
+      justify-content: space-between !important; /* Pushes menu left & icons right */
+      align-items: center !important;
+      width: 100% !important;
+    }
+
+    /* This is the key change: it forces the logo into the empty middle space */
+    header #mobile-header-container #mobileLogo {
+      margin-left: -100%;
+    }
+  }
+</style>
+
 </head>
   <body class="template-index body-theme ">
    
@@ -2034,12 +2054,14 @@ Shopify.routes.root = "index.html";</script>
       top: 0;
       width: 100%;
       z-index: 9;
-    }}
+    }
+  }
   
   @media (max-width:991px) {
     .logout-text,.register-text,.site-header__compare,.wishlist-text {
       display: none;
     }
+    
   }
   
   
@@ -2047,6 +2069,7 @@ Shopify.routes.root = "index.html";</script>
     .site-header__search.active {
       background: #fff;
     }
+    
   }
   
   @media (min-width:992px) {
@@ -2116,6 +2139,8 @@ Shopify.routes.root = "index.html";</script>
     margin-right: 1.5rem;
   }
   
+
+
   #topbar .col-right{
       display:-webkit-box;
       display:-ms-flexbox;
@@ -2399,98 +2424,10 @@ Shopify.routes.root = "index.html";</script>
             <a href="index.html" class="site-nav__link" aria-current="page">
               <span class="site-nav__title">Home</span></a>
           </li><li class="site-nav__item">
-            <a href="collections/all.html" class="site-nav__link">
+            <a href="#shopify-section-template--24261670928668__product_list_swiper_rgAwrb" class="site-nav__link">
               <span class="site-nav__title">New Arrival</span></a>
-          </li><li class="site-nav__item site-nav__item-mega ">
-            <a href="#" class="site-nav__link dropdown-toggle" >
-              <span class="site-nav__title">Shop</span></a>
-            <div class="site-nav__dropdown meganav meganav-4" ><div class="container">
-    <div class="row"><div class="mega-col mega-link  col ">
-        <div class="row"><div class="col-sm-3 d-col-link">
-            <div class="mega-col-inner ">
-              <div class="menu-title">
-                <a href="collections/co-ord-set.html" >Co-Ord Set</a>
-              </div>
-              <div class="widget-inner">
-                <ul class="nav-links"></ul>
-              </div>
-            </div>
-          </div><div class="col-sm-3 d-col-link">
-            <div class="mega-col-inner ">
-              <div class="menu-title">
-                <a href="collections/dress.html" >Dresses</a>
-              </div>
-              <div class="widget-inner">
-                <ul class="nav-links"></ul>
-              </div>
-            </div>
-          </div><div class="col-sm-3 d-col-link">
-            <div class="mega-col-inner ">
-              <div class="menu-title">
-                <a href="collections/top.html" >Tops</a>
-              </div>
-              <div class="widget-inner">
-                <ul class="nav-links"><li>
-                    <a href="collections/shirt.html" >Shirts</a>
-                  </li></ul>
-              </div>
-            </div>
-          </div><div class="col-sm-3 d-col-link">
-            <div class="mega-col-inner ">
-              <div class="menu-title">
-                <a href="collections/trousers.html" >Bottoms</a>
-              </div>
-              <div class="widget-inner">
-                <ul class="nav-links"><li>
-                    <a href="collections/trousers.html" >Trousers</a>
-                  </li><li>
-                    <a href="collections/skirt.html" >Skirts</a>
-                  </li></ul>
-              </div>
-            </div>
-          </div></div>
-      </div>
-        <div class="mega-col col" style="max-width:30%;flex:0 0 30%;">    
-          <div class="row">
-            
-<div class="promotionclassic_menu col mb-2 mt-3 d-col-link">
-                        <div class="image-content__image-container overflow-hidden">
-                            <a href="collections.html" class="image-content__image-wrapper promotionclassic__image wide" style="padding-top:150.03734129947722%;">
-                                
-                                <img class="image-content__image lazyload "
-                                    src="cdn/shop/files/IMG_81135cd7.jpg?crop=center&amp;height=1&amp;v=1750408626&amp;width=1"
-                                    data-src="cdn/shop/files/IMG_8113ae9e.jpg?v=1750408626&amp;width={width}"
-                                    data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]"
-                                    data-aspectratio="0.6665007466401195"
-                                    data-sizes="auto"
-                                    alt=""
-                                    loading="lazy"
-                                    width="2678"
-                                    height="4018">
-                            </a>
-                            <div class="promotionclassic_menu--content ">
-                                <div class="promotionclassic_menu--txt"><div class="my-3"> <h5 class="mb-2">Flat 50% Off</h5>
-<p>Our products are designed for everyone.</p></div><a class="btn btn-underline mb-1" href="collections.html"> Shop now</a></div>
-                            </div>
-                        </div>
-                      </div>
-
-
-
-
-
-          </div>
-         
-          
-        </div>
-      
-    </div>
-  </div>
-  </div>
-          </li><li class="site-nav__item">
-            <a href="collections.html" class="site-nav__link">
-              <span class="site-nav__title">Collections</span></a>
-          </li><li class="site-nav__item">
+          </li>
+          <li class="site-nav__item">
             <a href="pages/contact.html" class="site-nav__link">
               <span class="site-nav__title">Contact Us</span></a>
           </li><li class="site-nav__item">
@@ -2568,16 +2505,37 @@ Shopify.routes.root = "index.html";</script>
       </div>
     </details-modal>
 </div>
-
-  
     
+<!-- <div id="mobileLogo" class="d-block d-lg-none">
+    <a href="index.html">
+        <img src="images/mobileLogo.jpeg?v=1747981832&amp;width=150" alt="Saajia Logo" style="width: 90px; border-radius: 50px;">
+    </a>
+</div> -->
+
+<div class="d-flex align-items-center" id="mobile-header-container">
+
+    <div class="d-flex d-lg-none toggle-menu-mobile align-items-center">
+        </div>
+    
+    <div id="mobileLogo" class="d-block d-lg-none">
+        <a href="index.html">
+            <img src="images/mobileLogo.jpeg?v=1747981832&amp;width=150" alt="Saajia Logo" style="width: 90px; border-radius: 50px;">
+        </a>
+    </div>
+
+    <div class="d-none d-lg-flex col-menu">
+        </div>
+
+    <div class="header-bottom__right col-bottom__right">
+        </div>
+</div>
+
      
     <div class="header--acount d-none d-lg-inline-block topbar-block header-login-icon" ><a href="https://shopify.com/92796715292/account?locale=en&amp;region_country=IN" class=" site-header__link site-account">
         <span class="account-text">Login</span><svg aria-hidden="true" fill="none" focusable="false" width="24" class="svg-user" viewBox="0 0 24 24">
       <path d="M16.125 8.75c-.184 2.478-2.063 4.5-4.125 4.5s-3.944-2.021-4.125-4.5c-.187-2.578 1.64-4.5 4.125-4.5 2.484 0 4.313 1.969 4.125 4.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
       <path d="M3.017 20.747C3.783 16.5 7.922 14.25 12 14.25s8.217 2.25 8.984 6.497" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></path>
     </svg></a></div>
-    
     
       
 <a href="#" 
@@ -3358,6 +3316,15 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
     height: auto;
     display: block;
   }
+
+  #mobile1 {
+    /* Pushes the "SAAJIA'S COLLECTION" text down, which also pushes the text below it. */
+    padding-top: 200px; 
+  }
+
+  #mobileButton {
+    margin-top: -150px;
+  }
 }
 
 </style>
@@ -3372,9 +3339,9 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
          data-slide-nav-a11y="Load slide [slide_number]"
          data-transit="slide-fade"><div class="slide  slideshow__slide slideshow__slide--108726f6-4aa5-4791-b3da-44f38358c9b2"  style="background-color: #968574;"><div class="  slideshow__image box ratio-container">
 <div class="only-desktop">
-  <img src="images/lehnga1.jpg" alt="" srcset="images/lehnga1.jpg?v=1751007060&amp;width=375 375w, images/lehnga1.jpg?v=1751007060&amp;width=550 550w, images/lehnga1.jpg?v=1751007060&amp;width=750 750w, images/lehnga1.jpg?v=1751007060&amp;width=1100 1100w, images/lehnga1.jpg?v=1751007060&amp;width=1500 1500w, images/lehnga1.jpg?v=1751007060&amp;width=1780 1780w, images/lehnga1.jpg?v=1751007060&amp;width=2000 2000w, images/lehnga1.jpg?v=1751007060&amp;width=3000 3000w, images/lehnga1.jpg?v=1751007060&amp;width=3840 3840w" width="1350" height="788" loading="eager" sizes="100vw" fetchpriority="high" class="lazyload scale-in desktop" style="object-position:center top">
+  <img src="images/lehnga1.png" alt="" srcset="images/lehnga1.png?v=1751007060&amp;width=375 375w, images/lehnga1.png?v=1751007060&amp;width=550 550w, images/lehnga1.png?v=1751007060&amp;width=750 750w, images/lehnga1.png?v=1751007060&amp;width=1100 1100w, images/lehnga1.png?v=1751007060&amp;width=1500 1500w, images/lehnga1.png?v=1751007060&amp;width=1780 1780w, images/lehnga1.png?v=1751007060&amp;width=2000 2000w, images/lehnga1.png?v=1751007060&amp;width=3000 3000w, images/lehnga1.png?v=1751007060&amp;width=3840 3840w" width="1350" height="788" loading="eager" sizes="100vw" fetchpriority="high" class="lazyload scale-in desktop" style="object-position:center top">
 </div><div class="only-mobile">
-    <img src="images/lehnga1.jpg" alt="" srcset="images/lehnga1.jpg?v=1751007060&amp;width=375 375w, images/lehnga1.jpg?v=1751007060&amp;width=550 550w, images/lehnga1.jpg?v=1751007060&amp;width=750 750w, images/lehnga1.jpg?v=1751007060&amp;width=1100 1100w, images/lehnga1.jpg?v=1751007060&amp;width=1500 1500w, images/lehnga1.jpg?v=1751007060&amp;width=1780 1780w, images/lehnga1.jpg?v=1751007060&amp;width=2000 2000w, images/lehnga1.jpg?v=1751007060&amp;width=3000 3000w, images/lehnga1.jpg?v=1751007060&amp;width=3840 3840w" width="1350" height="788" loading="eager" sizes="100vw" fetchpriority="high" class="lazyload scale-in desktop" style="object-position:center top">
+    <img src="images/lehnga1.png" alt="" srcset="images/lehnga1.png?v=1751007060&amp;width=375 375w, images/lehnga1.png?v=1751007060&amp;width=550 550w, images/lehnga1.png?v=1751007060&amp;width=750 750w, images/lehnga1.png?v=1751007060&amp;width=1100 1100w, images/lehnga1.png?v=1751007060&amp;width=1500 1500w, images/lehnga1.png?v=1751007060&amp;width=1780 1780w, images/lehnga1.png?v=1751007060&amp;width=2000 2000w, images/lehnga1.png?v=1751007060&amp;width=3000 3000w, images/lehnga1.png?v=1751007060&amp;width=3840 3840w" width="1350" height="788" loading="eager" sizes="100vw" fetchpriority="high" class="lazyload scale-in desktop" style="object-position:center top">
 </div></div>
         
         
@@ -3384,22 +3351,25 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
             <div class="container" data-aos="fade" data-aos-anchor-placement="top-bottom"  data-aos-once="true">
               
               <div class="d-inline-block text-center ">
-              <ul class="list-unstyled"  ><li class="mb-3">
-                  <p class="slideshow__toptitle subtop" style="color:#ffffff">
-                    Saajia's Wedding Collection ’25
-                  </p>
-                </li><li style="margin-bottom:1rem;">
-                  <h2 class="h1 mega-title slideshow__title font-family-1" style="color:#ffffff">
-                    A Loveable Collection of Lehngas.
-                  </h2>
-                </li></ul><div class="slideshow__btn-wrapper align-items-center justify-content-center   slideshow__btn-wrapper--push" ><style>
+              <ul class="list-unstyled">
+  <li class="mb-3">
+    <p class="slideshow__toptitle subtop" style="color:#ffffff; -webkit-text-stroke: 1px black;" id="mobile1">
+      Saajia's Collection ’25
+    </p>
+  </li>
+  <li style="margin-bottom:1rem;">
+    <h2 class="h1 mega-title slideshow__title font-family-1" style="color:#ffffff; -webkit-text-stroke: 1px black;" id="mobile2">
+      A Loveable Collection of Dresses.
+    </h2>
+  </li>
+</ul><div class="slideshow__btn-wrapper align-items-center justify-content-center   slideshow__btn-wrapper--push" id="mobileButton"><style>
                     .btn-theme.slideshow__btn108726f6-4aa5-4791-b3da-44f38358c9b2{
-                      color:#ffffff;
+                      color: #ffffff !important; 
                       border: 1px solid #974d38;
-                      background-color:#974d38;
+                      background-image: linear-gradient(to right, #440A08, #320000);
                     }
                     .btn-theme.slideshow__btn108726f6-4aa5-4791-b3da-44f38358c9b2:hover{
-                      color:#974d38;
+                      color: black !important;
                       border-color:#ffffff;
                       
                     }
@@ -3446,6 +3416,62 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
         </div>
       </div></div>
   </div></div></div>
+<div id="shopify-section-template--24261670928668__product_list_swiper_rgAwrb" class="shopify-section index-section">
+    <style>
+      .customstyletemplate--24261670928668__product_list_swiper_rgAwrb{ background-position: center center !important; background-repeat: no-repeat !important; background-size: auto !important; --or-width-banner : 30%; }
+      .productswiper .swiper-container { overflow: visible; }
+      .productlist-swiper .product-card, .productlist-swiper .product-card .product-card__info{ margin-bottom: 0; }
+      .productlist-swiper .product-card__image-wr{ --g-color-heading : #974d38; --g-color-heading-rgb:151, 77, 56; }
+      .productlist-swiper .image-content__image{ height:100%; object-fit:cover; }
+      .productlist-banner { width:var(--or-width-banner) !important; }
+      .product-image__banner{ top:0; left:0; width:100%; height:100%; z-index:1; padding:32px; background:rgba(var(--bg-overlay-rgba),var(--bg-opacity)); }
+      @media (max-width:749px){ .productswiper .swiper-container { overflow: visible; } .productswiper .container-p .swiper-slide{ width: 74% !important; margin-right:20px !important; } .productswiper .container-p .productlist-banner { width:75% !important; } }
+      @media (min-width:750px){ .productlist-wrapper .swiper-button-prev{ left: -58px; } .productlist-wrapper .swiper-button-next{ right: -58px; } }
+    </style>
+    <div class="customstyletemplate--24261670928668__product_list_swiper_rgAwrb productswiper lazyload" data-aos="">
+        <style data-shopify>
+            .customstyletemplate--24261670928668__product_list_swiper_rgAwrb{ background-color:#ffffff; padding: 0px 0px 0px 0px; margin: 50px 0px 50px 0px; }
+            @media (max-width:750px){ .customstyletemplate--24261670928668__product_list_swiper_rgAwrb{ padding: 40px 0px 40px 0px; margin: 40px 0px 0px 0px } }
+        </style>
+        <div>
+            <div class="section-block">
+                <div class="container-fluid">
+                    <h3 class="section-title-1 text-center mb-5" data-aos="" data-aos-duration="500">
+                        <span>New Arrivals</span>
+                    </h3>
+                </div>
+                <div class="container-fluid container-p">
+                    <div class="productlist-wrapper dots-negative swiper-wrapper-template--24261670928668__product_list_swiper_rgAwrb position-relative">
+                        <div class="productlist-swiper swiper-container swipercol-template--24261670928668__product_list_swiper_rgAwrb pb-5" id="Productlist-template--24261670928668__product_list_swiper_rgAwrb" data-section-id="template--24261670928668__product_list_swiper_rgAwrb" data-section-type="swipercustom" data-perview-desktop="3" data-space-between="20" data-perview-mobile=" 1.32 ">
+                            
+                            <div class="swiper-wrapper" id="newArrivals-swiper-wrapper">
+
+                                <div class="productlist-banner swiper-slide h-100">
+                                    <div class="image-content__image-container h-100 overflow-hidden">
+                                        <div class="image-content__image-wrapper h-100">
+                                            <img class="image-content__image lazyload scale-in" src="images/5/1.jpg?v=1750408626&amp;width=720" alt="" loading="lazy">
+                                        </div>
+                                        <div class="product-image__banner position-absolute d-flex align-items-center justify-content-center text-center" style="--bg-overlay-rgba: 0, 0, 0; --bg-opacity: 0.2;--g-font-color-subtop: #ffffff; --g-color-heading : #ffffff; --color-body-text : #ffffff; --color-body-text-rgb: 255, 255, 255;">
+                                            <div class="product-image__banner_in">
+                                                <h3 class="mb-2 h2"><a href="#">New Arrivals</a></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                </div>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
           <div id="shopify-section-template--24261670928668__featured_products_64iAG7" class="shopify-section index-section"><!-- featured-products.liquid -->
 <div class="customstyletemplate--24261670928668__featured_products_64iAG7 " ><style data-shopify>.customstyletemplate--24261670928668__featured_products_64iAG7{
       background-color:#ffffff;
@@ -3459,788 +3485,10 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
       }
     }</style><div class="container-fluid">
     <div class="section-block"><!-- section-heading.liquid - Apply for all section title --><h3 class="section-title-1 text-left   mb-5 " data-aos="fade" data-aos-duration="500">
-    <span>New Dress Collection</span>
-  </h3><div class="row  " data-aos="fade"><div class="col-1-5 col-md-6 col-sm-6 col-xs-6 col-6  col-item " 
-          data-aos="fade"  data-aos-delay="50" ><style>
-  .product-card__image-wr {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-}
-</style>
-
-
-<!-- <div class="product-card js-product-card product-card--style2 text-left" data-price="285000">
-  <div class="product-card__image-wr">
-    <a class="product-card__image js image-content__image-wrapper auto" href="collections/azure/products/matcha-dress.html" style="padding-top:150.00000000000003%;" data-image-id="41300478001436">
-        <img
-          srcset="//kashique.in/cdn/shop/files/2F9A9892.jpg?v=1751358209&width=165 165w,//kashique.in/cdn/shop/files/2F9A9892.jpg?v=1751358209&width=360 360w,//kashique.in/cdn/shop/files/2F9A9892.jpg?v=1751358209&width=533 533w,//kashique.in/cdn/shop/files/2F9A9892.jpg?v=1751358209&width=720 720w,//kashique.in/cdn/shop/files/2F9A9892.jpg?v=1751358209&width=940 940w,//kashique.in/cdn/shop/files/2F9A9892.jpg?v=1751358209&width=1066 1066w,//kashique.in/cdn/shop/files/2F9A9892.jpg?v=1751358209 3648w
-          "
-          src="cdn/shop/files/2F9A9892bf3b.jpg?v=1751358209&amp;width=720"
-          sizes="(min-width: 1300px) 295px, (min-width: 990px) calc((100vw - 120px) / 4), (min-width: 750px) ca lc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-          alt="Matcha Dress"
-          class="lazyload scale-in first-image"
-          data-sizes="auto"
-          data-aspectratio="0.6666666666666666"
-          loading="lazy"
-          width="3648"
-          height="5472"
-        >
-        
- <img
-        srcset="//kashique.in/cdn/shop/files/2F9A9911.jpg?v=1751358209&width=165 165w,//kashique.in/cdn/shop/files/2F9A9911.jpg?v=1751358209&width=360 360w,//kashique.in/cdn/shop/files/2F9A9911.jpg?v=1751358209&width=533 533w,//kashique.in/cdn/shop/files/2F9A9911.jpg?v=1751358209&width=720 720w,//kashique.in/cdn/shop/files/2F9A9911.jpg?v=1751358209&width=940 940w,//kashique.in/cdn/shop/files/2F9A9911.jpg?v=1751358209&width=1066 1066w,//kashique.in/cdn/shop/files/2F9A9911.jpg?v=1751358209 3648w
-        "
-        src="cdn/shop/files/2F9A9911bf3b.jpg?v=1751358209&amp;width=720"
-        sizes="(min-width: 1300px) 295px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-        alt="Matcha Dress"
-        class="lazyload transition second-image"
-        data-sizes="auto"
-        data-aspectratio="0.6666666666666666"
-        loading="lazy"
-        width="3648"
-        height="5472"
-      >
-  </a>
-<div class="product-label rectangular_label ">
+    <div style="display: flex; justify-content: center;"><span>New Dress Collection</span></div>
+  </h3><div class="row  " data-aos="fade" id="newDresses">
     
-
-    </div><div class="product-card__overlay product-card__overlay_wl d-flex justify-content-center flex-column"><span data-toggle="tooltip" data-placement="left" data-tooltipalltimes="true" class="btn btn-theme gradient-theme-vertical product-card__overlay-btn js-btn-wishlist" title="Wishlist" data-handle="matcha-dress">
-<svg class="svg-heart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M16.5429 4C13.4999 4 12 6.99984 12 6.99984C12 6.99984 10.5001 4 7.45712 4C4.98412 4 3.02579 6.06895 3.00048 8.53772C2.94892 13.6623 7.06573 17.3066 11.5782 20.3693C11.7026 20.4539 11.8495 20.4992 12 20.4992C12.1505 20.4992 12.2975 20.4539 12.4219 20.3693C16.9338 17.3066 21.0506 13.6623 20.9995 8.53772C20.9742 6.06895 19.0159 4 16.5429 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-    </span></div>
-  </div>
-  <div class="product-card__info"><ul class="product-card__swatch list-unstyled  sw_color round-color">
-</ul>
-
-    <a href="collections/azure/products/matcha-dress.html" title="Matcha Dress" class="d-block product-card__name  text-uppercase ">Matcha Dress</a>
-    
-<div style='' class='jdgm-widget jdgm-preview-badge  py-1 small'  data-id='10188303139100' data-auto-install="false" >
-      
     </div>
-    
-  <div class="product-card__price "><span class="visually-hidden">Regular price</span>
-  Rs. 2,850.00
-</div>
-
-    <div class="product-form__item product-form__item--submit d-flex justify-content-end-lg flex-row align-items-center">
-      <span class="btn btn-theme btn-sm js-grid-cart d-inline-flex align-items-center " 
-        title="Add to Cart" 
-        data-id="52100416733468">
-        <div class="product-card__loading spinner-border" role="status"></div>
-        <span class="mr-2">Add to Cart </span>
-<svg class="svg-cart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M3.94727 6.86532L6.67857 3.56785V3.47363H17.4154L20.0525 6.86532M3.94727 6.86532V18.8304C3.94727 19.7725 4.79491 20.5263 5.73674 20.5263H18.263C19.2049 20.5263 20.0525 19.7725 20.0525 18.8304V6.86532M3.94727 6.86532H20.0525M15.6259 10.257C15.6259 12.1413 14.0248 13.6487 12.047 13.6487C10.0692 13.6487 8.37385 12.1413 8.37385 10.257" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg></span><span  class="btn btn-theme js-btn-quickview product-card__overlay-btn" data-toggle="modal" 
-        data-target="#jsQuickview" data-handle="matcha-dress"
-        data-pavailable="true"
-         data-viewjdmg="<span class='jdgm-preview-badge' data-id='10188303139100'></span>" 
-         >
-        <span class="d-block" title="Quickshop">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11.9844 5.57178C8.50513 5.57178 4.93608 7.58553 2.12638 11.613C2.04618 11.7293 2.00223 11.8666 2.00008 12.0078C1.99794 12.149 2.03769 12.2877 2.11432 12.4063C4.27316 15.7856 7.79444 18.4284 11.9844 18.4284C16.1289 18.4284 19.7225 15.7776 21.8854 12.3907C21.9602 12.2744 22 12.139 22 12.0007C22 11.8624 21.9602 11.7271 21.8854 11.6108C19.7176 8.26273 16.0977 5.57178 11.9844 5.57178Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12.0029 15.5713C13.9753 15.5713 15.5742 13.9723 15.5742 12C15.5742 10.0276 13.9753 8.42871 12.0029 8.42871C10.0306 8.42871 8.43164 10.0276 8.43164 12C8.43164 13.9723 10.0306 15.5713 12.0029 15.5713Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
-</svg>
-<span class="icon__fallback-text">Quickshop</span><span class=" txt-short hide" >
-            
-          </span></span>
-      </span></div>
-  </div>
-</div></div><div class="col-1-5 col-md-6 col-sm-6 col-xs-6 col-6  col-item " 
-          data-aos="fade"  data-aos-delay="100" ><style>
-  .product-card__image-wr {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-}
-</style>
-
-
-<div class="product-card js-product-card product-card--style2 text-left" data-price="285000">
-  <div class="product-card__image-wr">
-    <a class="product-card__image js image-content__image-wrapper auto" href="collections/azure/products/spot-on-dress.html" style="padding-top:149.986013986014%;" data-image-id="41300483768604">
-        <img
-          srcset="//kashique.in/cdn/shop/files/2F9A9971.jpg?v=1751358336&width=165 165w,//kashique.in/cdn/shop/files/2F9A9971.jpg?v=1751358336&width=360 360w,//kashique.in/cdn/shop/files/2F9A9971.jpg?v=1751358336&width=533 533w,//kashique.in/cdn/shop/files/2F9A9971.jpg?v=1751358336&width=720 720w,//kashique.in/cdn/shop/files/2F9A9971.jpg?v=1751358336&width=940 940w,//kashique.in/cdn/shop/files/2F9A9971.jpg?v=1751358336&width=1066 1066w,//kashique.in/cdn/shop/files/2F9A9971.jpg?v=1751358336 3575w
-          "
-          src="cdn/shop/files/2F9A99716b4b.jpg?v=1751358336&amp;width=720"
-          sizes="(min-width: 1300px) 295px, (min-width: 990px) calc((100vw - 120px) / 4), (min-width: 750px) ca lc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-          alt="Spot On Dress"
-          class="lazyload scale-in first-image"
-          data-sizes="auto"
-          data-aspectratio="0.6667288325251771"
-          loading="lazy"
-          width="3575"
-          height="5362"
-        >
-        
- <img
-        srcset="//kashique.in/cdn/shop/files/2F9A9980.jpg?v=1751358325&width=165 165w,//kashique.in/cdn/shop/files/2F9A9980.jpg?v=1751358325&width=360 360w,//kashique.in/cdn/shop/files/2F9A9980.jpg?v=1751358325&width=533 533w,//kashique.in/cdn/shop/files/2F9A9980.jpg?v=1751358325&width=720 720w,//kashique.in/cdn/shop/files/2F9A9980.jpg?v=1751358325&width=940 940w,//kashique.in/cdn/shop/files/2F9A9980.jpg?v=1751358325&width=1066 1066w,//kashique.in/cdn/shop/files/2F9A9980.jpg?v=1751358325 3648w
-        "
-        src="cdn/shop/files/2F9A99800454.jpg?v=1751358325&amp;width=720"
-        sizes="(min-width: 1300px) 295px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-        alt="Spot On Dress"
-        class="lazyload transition second-image"
-        data-sizes="auto"
-        data-aspectratio="0.6666666666666666"
-        loading="lazy"
-        width="3648"
-        height="5472"
-      >
-  </a>
-<div class="product-label rectangular_label ">
-    
-
-    </div><div class="product-card__overlay product-card__overlay_wl d-flex justify-content-center flex-column"><span data-toggle="tooltip" data-placement="left" data-tooltipalltimes="true" class="btn btn-theme gradient-theme-vertical product-card__overlay-btn js-btn-wishlist" title="Wishlist" data-handle="spot-on-dress">
-<svg class="svg-heart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M16.5429 4C13.4999 4 12 6.99984 12 6.99984C12 6.99984 10.5001 4 7.45712 4C4.98412 4 3.02579 6.06895 3.00048 8.53772C2.94892 13.6623 7.06573 17.3066 11.5782 20.3693C11.7026 20.4539 11.8495 20.4992 12 20.4992C12.1505 20.4992 12.2975 20.4539 12.4219 20.3693C16.9338 17.3066 21.0506 13.6623 20.9995 8.53772C20.9742 6.06895 19.0159 4 16.5429 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-    </span></div>
-  </div>
-  <div class="product-card__info"><ul class="product-card__swatch list-unstyled  sw_color round-color">
-</ul>
-
-    <a href="collections/azure/products/spot-on-dress.html" title="Spot On Dress" class="d-block product-card__name  text-uppercase ">Spot On Dress</a>
-    
-<div style='' class='jdgm-widget jdgm-preview-badge  py-1 small'  data-id='10188301566236' data-auto-install="false" >
-      
-    </div>
-    
-  <div class="product-card__price "><span class="visually-hidden">Regular price</span>
-  Rs. 2,850.00
-</div>
-
-    <div class="product-form__item product-form__item--submit d-flex justify-content-end-lg flex-row align-items-center">
-      <span class="btn btn-theme btn-sm js-grid-cart d-inline-flex align-items-center " 
-        title="Add to Cart" 
-        data-id="52100399366428">
-        <div class="product-card__loading spinner-border" role="status"></div>
-        <span class="mr-2">Add to Cart </span>
-<svg class="svg-cart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M3.94727 6.86532L6.67857 3.56785V3.47363H17.4154L20.0525 6.86532M3.94727 6.86532V18.8304C3.94727 19.7725 4.79491 20.5263 5.73674 20.5263H18.263C19.2049 20.5263 20.0525 19.7725 20.0525 18.8304V6.86532M3.94727 6.86532H20.0525M15.6259 10.257C15.6259 12.1413 14.0248 13.6487 12.047 13.6487C10.0692 13.6487 8.37385 12.1413 8.37385 10.257" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg></span><span  class="btn btn-theme js-btn-quickview product-card__overlay-btn" data-toggle="modal" 
-        data-target="#jsQuickview" data-handle="spot-on-dress"
-        data-pavailable="true"
-         data-viewjdmg="<span class='jdgm-preview-badge' data-id='10188301566236'></span>" 
-         >
-        <span class="d-block" title="Quickshop">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11.9844 5.57178C8.50513 5.57178 4.93608 7.58553 2.12638 11.613C2.04618 11.7293 2.00223 11.8666 2.00008 12.0078C1.99794 12.149 2.03769 12.2877 2.11432 12.4063C4.27316 15.7856 7.79444 18.4284 11.9844 18.4284C16.1289 18.4284 19.7225 15.7776 21.8854 12.3907C21.9602 12.2744 22 12.139 22 12.0007C22 11.8624 21.9602 11.7271 21.8854 11.6108C19.7176 8.26273 16.0977 5.57178 11.9844 5.57178Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12.0029 15.5713C13.9753 15.5713 15.5742 13.9723 15.5742 12C15.5742 10.0276 13.9753 8.42871 12.0029 8.42871C10.0306 8.42871 8.43164 10.0276 8.43164 12C8.43164 13.9723 10.0306 15.5713 12.0029 15.5713Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
-</svg>
-<span class="icon__fallback-text">Quickshop</span><span class=" txt-short hide" >
-            
-          </span></span>
-      </span></div>
-  </div>
-</div></div><div class="col-1-5 col-md-6 col-sm-6 col-xs-6 col-6  col-item " 
-          data-aos="fade"  data-aos-delay="150" ><style>
-  .product-card__image-wr {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-}
-</style>
-
-
-<div class="product-card js-product-card product-card--style2 text-left" data-price="350000">
-  <div class="product-card__image-wr">
-    <a class="product-card__image js image-content__image-wrapper auto" href="collections/azure/products/azure-co-ord-set.html" style="padding-top:150.00000000000003%;" data-image-id="41300468465948">
-        <img
-          srcset="//kashique.in/cdn/shop/files/2F9A9641.jpg?v=1751357915&width=165 165w,//kashique.in/cdn/shop/files/2F9A9641.jpg?v=1751357915&width=360 360w,//kashique.in/cdn/shop/files/2F9A9641.jpg?v=1751357915&width=533 533w,//kashique.in/cdn/shop/files/2F9A9641.jpg?v=1751357915&width=720 720w,//kashique.in/cdn/shop/files/2F9A9641.jpg?v=1751357915&width=940 940w,//kashique.in/cdn/shop/files/2F9A9641.jpg?v=1751357915&width=1066 1066w,//kashique.in/cdn/shop/files/2F9A9641.jpg?v=1751357915 3648w
-          "
-          src="cdn/shop/files/2F9A9641efd4.jpg?v=1751357915&amp;width=720"
-          sizes="(min-width: 1300px) 295px, (min-width: 990px) calc((100vw - 120px) / 4), (min-width: 750px) ca lc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-          alt="Azure Co-Ord Set"
-          class="lazyload scale-in first-image"
-          data-sizes="auto"
-          data-aspectratio="0.6666666666666666"
-          loading="lazy"
-          width="3648"
-          height="5472"
-        >
-        
- <img
-        srcset="//kashique.in/cdn/shop/files/2F9A9631.jpg?v=1751357915&width=165 165w,//kashique.in/cdn/shop/files/2F9A9631.jpg?v=1751357915&width=360 360w,//kashique.in/cdn/shop/files/2F9A9631.jpg?v=1751357915&width=533 533w,//kashique.in/cdn/shop/files/2F9A9631.jpg?v=1751357915&width=720 720w,//kashique.in/cdn/shop/files/2F9A9631.jpg?v=1751357915&width=940 940w,//kashique.in/cdn/shop/files/2F9A9631.jpg?v=1751357915&width=1066 1066w,//kashique.in/cdn/shop/files/2F9A9631.jpg?v=1751357915 3648w
-        "
-        src="cdn/shop/files/2F9A9631efd4.jpg?v=1751357915&amp;width=720"
-        sizes="(min-width: 1300px) 295px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-        alt="Azure Co-Ord Set"
-        class="lazyload transition second-image"
-        data-sizes="auto"
-        data-aspectratio="0.6666666666666666"
-        loading="lazy"
-        width="3648"
-        height="5472"
-      >
-  </a>
-<div class="product-label rectangular_label ">
-    
-
-    </div><div class="product-card__overlay product-card__overlay_wl d-flex justify-content-center flex-column"><span data-toggle="tooltip" data-placement="left" data-tooltipalltimes="true" class="btn btn-theme gradient-theme-vertical product-card__overlay-btn js-btn-wishlist" title="Wishlist" data-handle="azure-co-ord-set">
-<svg class="svg-heart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M16.5429 4C13.4999 4 12 6.99984 12 6.99984C12 6.99984 10.5001 4 7.45712 4C4.98412 4 3.02579 6.06895 3.00048 8.53772C2.94892 13.6623 7.06573 17.3066 11.5782 20.3693C11.7026 20.4539 11.8495 20.4992 12 20.4992C12.1505 20.4992 12.2975 20.4539 12.4219 20.3693C16.9338 17.3066 21.0506 13.6623 20.9995 8.53772C20.9742 6.06895 19.0159 4 16.5429 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-    </span></div>
-  </div>
-  <div class="product-card__info"><ul class="product-card__swatch list-unstyled  sw_color round-color">
-</ul>
-
-    <a href="collections/azure/products/azure-co-ord-set.html" title="Azure Co-Ord Set" class="d-block product-card__name  text-uppercase ">Azure Co-Ord Set</a>
-    
-<div style='' class='jdgm-widget jdgm-preview-badge  py-1 small'  data-id='10188308939036' data-auto-install="false" >
-      
-    </div>
-    
-  <div class="product-card__price "><span class="visually-hidden">Regular price</span>
-  Rs. 3,500.00
-</div>
-
-    <div class="product-form__item product-form__item--submit d-flex justify-content-end-lg flex-row align-items-center">
-      <span class="btn btn-theme btn-sm js-grid-cart d-inline-flex align-items-center " 
-        title="Add to Cart" 
-        data-id="52100485316892">
-        <div class="product-card__loading spinner-border" role="status"></div>
-        <span class="mr-2">Add to Cart </span>
-<svg class="svg-cart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M3.94727 6.86532L6.67857 3.56785V3.47363H17.4154L20.0525 6.86532M3.94727 6.86532V18.8304C3.94727 19.7725 4.79491 20.5263 5.73674 20.5263H18.263C19.2049 20.5263 20.0525 19.7725 20.0525 18.8304V6.86532M3.94727 6.86532H20.0525M15.6259 10.257C15.6259 12.1413 14.0248 13.6487 12.047 13.6487C10.0692 13.6487 8.37385 12.1413 8.37385 10.257" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg></span><span  class="btn btn-theme js-btn-quickview product-card__overlay-btn" data-toggle="modal" 
-        data-target="#jsQuickview" data-handle="azure-co-ord-set"
-        data-pavailable="true"
-         data-viewjdmg="<span class='jdgm-preview-badge' data-id='10188308939036'></span>" 
-         >
-        <span class="d-block" title="Quickshop">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11.9844 5.57178C8.50513 5.57178 4.93608 7.58553 2.12638 11.613C2.04618 11.7293 2.00223 11.8666 2.00008 12.0078C1.99794 12.149 2.03769 12.2877 2.11432 12.4063C4.27316 15.7856 7.79444 18.4284 11.9844 18.4284C16.1289 18.4284 19.7225 15.7776 21.8854 12.3907C21.9602 12.2744 22 12.139 22 12.0007C22 11.8624 21.9602 11.7271 21.8854 11.6108C19.7176 8.26273 16.0977 5.57178 11.9844 5.57178Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12.0029 15.5713C13.9753 15.5713 15.5742 13.9723 15.5742 12C15.5742 10.0276 13.9753 8.42871 12.0029 8.42871C10.0306 8.42871 8.43164 10.0276 8.43164 12C8.43164 13.9723 10.0306 15.5713 12.0029 15.5713Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
-</svg>
-<span class="icon__fallback-text">Quickshop</span><span class=" txt-short hide" >
-            
-          </span></span>
-      </span></div>
-  </div>
-</div></div><div class="col-1-5 col-md-6 col-sm-6 col-xs-6 col-6  col-item " 
-          data-aos="fade"  data-aos-delay="200" ><style>
-  .product-card__image-wr {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-}
-</style>
-
-
-<div class="product-card js-product-card product-card--style2 text-left" data-price="245000">
-  <div class="product-card__image-wr">
-    <a class="product-card__image js image-content__image-wrapper auto" href="collections/azure/products/cherry-line-dress.html" style="padding-top:150.00000000000003%;" data-image-id="41300463386908">
-        <img
-          srcset="//kashique.in/cdn/shop/files/2F9A9789.jpg?v=1751357855&width=165 165w,//kashique.in/cdn/shop/files/2F9A9789.jpg?v=1751357855&width=360 360w,//kashique.in/cdn/shop/files/2F9A9789.jpg?v=1751357855&width=533 533w,//kashique.in/cdn/shop/files/2F9A9789.jpg?v=1751357855&width=720 720w,//kashique.in/cdn/shop/files/2F9A9789.jpg?v=1751357855&width=940 940w,//kashique.in/cdn/shop/files/2F9A9789.jpg?v=1751357855&width=1066 1066w,//kashique.in/cdn/shop/files/2F9A9789.jpg?v=1751357855 3648w
-          "
-          src="cdn/shop/files/2F9A97894526.jpg?v=1751357855&amp;width=720"
-          sizes="(min-width: 1300px) 295px, (min-width: 990px) calc((100vw - 120px) / 4), (min-width: 750px) ca lc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-          alt="Cherry Line Dress"
-          class="lazyload scale-in first-image"
-          data-sizes="auto"
-          data-aspectratio="0.6666666666666666"
-          loading="lazy"
-          width="3648"
-          height="5472"
-        >
-        
- <img
-        srcset="//kashique.in/cdn/shop/files/2F9A9788.jpg?v=1751357855&width=165 165w,//kashique.in/cdn/shop/files/2F9A9788.jpg?v=1751357855&width=360 360w,//kashique.in/cdn/shop/files/2F9A9788.jpg?v=1751357855&width=533 533w,//kashique.in/cdn/shop/files/2F9A9788.jpg?v=1751357855&width=720 720w,//kashique.in/cdn/shop/files/2F9A9788.jpg?v=1751357855&width=940 940w,//kashique.in/cdn/shop/files/2F9A9788.jpg?v=1751357855&width=1066 1066w,//kashique.in/cdn/shop/files/2F9A9788.jpg?v=1751357855 3648w
-        "
-        src="cdn/shop/files/2F9A97884526.jpg?v=1751357855&amp;width=720"
-        sizes="(min-width: 1300px) 295px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-        alt="Cherry Line Dress"
-        class="lazyload transition second-image"
-        data-sizes="auto"
-        data-aspectratio="0.6666666666666666"
-        loading="lazy"
-        width="3648"
-        height="5472"
-      >
-  </a>
-<div class="product-label rectangular_label ">
-    
-
-    </div><div class="product-card__overlay product-card__overlay_wl d-flex justify-content-center flex-column"><span data-toggle="tooltip" data-placement="left" data-tooltipalltimes="true" class="btn btn-theme gradient-theme-vertical product-card__overlay-btn js-btn-wishlist" title="Wishlist" data-handle="cherry-line-dress">
-<svg class="svg-heart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M16.5429 4C13.4999 4 12 6.99984 12 6.99984C12 6.99984 10.5001 4 7.45712 4C4.98412 4 3.02579 6.06895 3.00048 8.53772C2.94892 13.6623 7.06573 17.3066 11.5782 20.3693C11.7026 20.4539 11.8495 20.4992 12 20.4992C12.1505 20.4992 12.2975 20.4539 12.4219 20.3693C16.9338 17.3066 21.0506 13.6623 20.9995 8.53772C20.9742 6.06895 19.0159 4 16.5429 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-    </span></div>
-  </div>
-  <div class="product-card__info"><ul class="product-card__swatch list-unstyled  sw_color round-color">
-</ul>
-
-    <a href="collections/azure/products/cherry-line-dress.html" title="Cherry Line Dress" class="d-block product-card__name  text-uppercase ">Cherry Line Dress</a>
-    
-<div style='' class='jdgm-widget jdgm-preview-badge  py-1 small'  data-id='10188313166108' data-auto-install="false" >
-      
-    </div>
-    
-  <div class="product-card__price "><span class="visually-hidden">Regular price</span>
-  Rs. 2,450.00
-</div>
-
-    <div class="product-form__item product-form__item--submit d-flex justify-content-end-lg flex-row align-items-center">
-      <span class="btn btn-theme btn-sm js-grid-cart d-inline-flex align-items-center " 
-        title="Add to Cart" 
-        data-id="52100518215964">
-        <div class="product-card__loading spinner-border" role="status"></div>
-        <span class="mr-2">Add to Cart </span>
-<svg class="svg-cart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M3.94727 6.86532L6.67857 3.56785V3.47363H17.4154L20.0525 6.86532M3.94727 6.86532V18.8304C3.94727 19.7725 4.79491 20.5263 5.73674 20.5263H18.263C19.2049 20.5263 20.0525 19.7725 20.0525 18.8304V6.86532M3.94727 6.86532H20.0525M15.6259 10.257C15.6259 12.1413 14.0248 13.6487 12.047 13.6487C10.0692 13.6487 8.37385 12.1413 8.37385 10.257" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg></span><span  class="btn btn-theme js-btn-quickview product-card__overlay-btn" data-toggle="modal" 
-        data-target="#jsQuickview" data-handle="cherry-line-dress"
-        data-pavailable="true"
-         data-viewjdmg="<span class='jdgm-preview-badge' data-id='10188313166108'></span>" 
-         >
-        <span class="d-block" title="Quickshop">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11.9844 5.57178C8.50513 5.57178 4.93608 7.58553 2.12638 11.613C2.04618 11.7293 2.00223 11.8666 2.00008 12.0078C1.99794 12.149 2.03769 12.2877 2.11432 12.4063C4.27316 15.7856 7.79444 18.4284 11.9844 18.4284C16.1289 18.4284 19.7225 15.7776 21.8854 12.3907C21.9602 12.2744 22 12.139 22 12.0007C22 11.8624 21.9602 11.7271 21.8854 11.6108C19.7176 8.26273 16.0977 5.57178 11.9844 5.57178Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12.0029 15.5713C13.9753 15.5713 15.5742 13.9723 15.5742 12C15.5742 10.0276 13.9753 8.42871 12.0029 8.42871C10.0306 8.42871 8.43164 10.0276 8.43164 12C8.43164 13.9723 10.0306 15.5713 12.0029 15.5713Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
-</svg>
-<span class="icon__fallback-text">Quickshop</span><span class=" txt-short hide" >
-            
-          </span></span>
-      </span></div>
-  </div>
-</div></div><div class="col-1-5 col-md-6 col-sm-6 col-xs-6 col-6  col-item " 
-          data-aos="fade"  data-aos-delay="250" ><style>
-  .product-card__image-wr {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-}
-</style> -->
-
-
-<div class="product-card js-product-card product-card--style2 text-left" data-price="350000">
-  <div class="product-card__image-wr">
-    <a class="product-card__image js image-content__image-wrapper auto" href="collections/azure/products/sandline-co-ord-set.html" style="padding-top:150.00000000000003%;" data-image-id="41300473119004">
-        <img
-          srcset="images/1/4.jpg?v=1752683777&width=165 165w,images/1/4.jpg?v=1752683777&width=360 360w,images/1/4.jpg?v=1752683777&width=533 533w,images/1/4.jpg?v=1752683777&width=720 720w,images/1/4.jpg?v=1752683777&width=940 940w,images/1/4.jpg?v=1752683777&width=1066 1066w,images/1/4.jpg?v=1752683777 3464w
-          "
-          src="images/1/1.jpg?v=1752683777&amp;width=720"
-          sizes="(min-width: 1300px) 295px, (min-width: 990px) calc((100vw - 120px) / 4), (min-width: 750px) ca lc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-          alt="Sandline Co-Ord Set"
-          class="lazyload scale-in first-image"
-          data-sizes="auto"
-          data-aspectratio="0.6666666666666666"
-          loading="lazy"
-          width="3464"
-          height="5196"
-        >
-        
- <img
-        srcset="images/1/2.jpg?v=1752683777&width=165 165w,images/1/2.jpg?v=1752683777&width=360 360w,images/1/2.jpg?v=1752683777&width=533 533w,images/1/2.jpg?v=1752683777&width=720 720w,images/1/2.jpg?v=1752683777&width=940 940w,images/1/2.jpg?v=1752683777&width=1066 1066w,images/1/2.jpg?v=1752683777 3573w
-        "
-        src="images/1/1.jpg?v=1752683777&amp;width=720"
-        sizes="(min-width: 1300px) 295px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-        alt="Sandline Co-Ord Set"
-        class="lazyload transition second-image"
-        data-sizes="auto"
-        data-aspectratio="0.6667288673259937"
-        loading="lazy"
-        width="3573"
-        height="5359"
-      >
-  </a>
-<div class="product-label rectangular_label ">
-    
-
-    </div><div class="product-card__overlay product-card__overlay_wl d-flex justify-content-center flex-column"><span data-toggle="tooltip" data-placement="left" data-tooltipalltimes="true" class="btn btn-theme gradient-theme-vertical product-card__overlay-btn js-btn-wishlist" title="Wishlist" data-handle="sandline-co-ord-set">
-<svg class="svg-heart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M16.5429 4C13.4999 4 12 6.99984 12 6.99984C12 6.99984 10.5001 4 7.45712 4C4.98412 4 3.02579 6.06895 3.00048 8.53772C2.94892 13.6623 7.06573 17.3066 11.5782 20.3693C11.7026 20.4539 11.8495 20.4992 12 20.4992C12.1505 20.4992 12.2975 20.4539 12.4219 20.3693C16.9338 17.3066 21.0506 13.6623 20.9995 8.53772C20.9742 6.06895 19.0159 4 16.5429 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-    </span></div>
-  </div>
-  <div class="product-card__info"><ul class="product-card__swatch list-unstyled  sw_color round-color">
-
-</ul>
-
-    <a href="collections/azure/products/sandline-co-ord-set.html" title="Sandline Co-Ord Set" class="d-block product-card__name  text-uppercase " id="dress1-name"></a>
-    
-<div style='' class='jdgm-widget jdgm-preview-badge  py-1 small'  data-id='10188291440924' data-auto-install="false" >
-      
-    </div>
-    
-  <div class="product-card__price "  id="dress1-price"><span class="visually-hidden">Regular price</span>
-  Rs. 3,500.00
-</div>
-
-    <div class="product-form__item product-form__item--submit d-flex justify-content-end-lg flex-row align-items-center">
-      <span class="btn btn-theme btn-sm js-grid-cart d-inline-flex align-items-center " 
-        title="Add to Cart" 
-        data-id="52100348412188">
-        <div class="product-card__loading spinner-border" role="status"></div>
-        <span class="mr-2">Add to Cart </span>
-<svg class="svg-cart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M3.94727 6.86532L6.67857 3.56785V3.47363H17.4154L20.0525 6.86532M3.94727 6.86532V18.8304C3.94727 19.7725 4.79491 20.5263 5.73674 20.5263H18.263C19.2049 20.5263 20.0525 19.7725 20.0525 18.8304V6.86532M3.94727 6.86532H20.0525M15.6259 10.257C15.6259 12.1413 14.0248 13.6487 12.047 13.6487C10.0692 13.6487 8.37385 12.1413 8.37385 10.257" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg></span><span  class="btn btn-theme js-btn-quickview product-card__overlay-btn" data-toggle="modal" 
-        data-target="#jsQuickview" data-handle="sandline-co-ord-set"
-        data-pavailable="true"
-         data-viewjdmg="<span class='jdgm-preview-badge' data-id='10188291440924'></span>" 
-         >
-        <span class="d-block" title="Quickshop">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11.9844 5.57178C8.50513 5.57178 4.93608 7.58553 2.12638 11.613C2.04618 11.7293 2.00223 11.8666 2.00008 12.0078C1.99794 12.149 2.03769 12.2877 2.11432 12.4063C4.27316 15.7856 7.79444 18.4284 11.9844 18.4284C16.1289 18.4284 19.7225 15.7776 21.8854 12.3907C21.9602 12.2744 22 12.139 22 12.0007C22 11.8624 21.9602 11.7271 21.8854 11.6108C19.7176 8.26273 16.0977 5.57178 11.9844 5.57178Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12.0029 15.5713C13.9753 15.5713 15.5742 13.9723 15.5742 12C15.5742 10.0276 13.9753 8.42871 12.0029 8.42871C10.0306 8.42871 8.43164 10.0276 8.43164 12C8.43164 13.9723 10.0306 15.5713 12.0029 15.5713Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
-</svg>
-<span class="icon__fallback-text">Quickshop</span><span class=" txt-short hide" >
-            
-          </span></span>
-      </span></div>
-  </div>
-</div></div><div class="col-1-5 col-md-6 col-sm-6 col-xs-6 col-6  col-item " 
-          data-aos="fade"  data-aos-delay="300" ><style>
-  .product-card__image-wr {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-}
-</style>
-
-
-<div class="product-card js-product-card product-card--style2 text-left" data-price="150000">
-  <div class="product-card__image-wr">
-    <a class="product-card__image js image-content__image-wrapper auto" href="collections/azure/products/sandline-top.html" style="padding-top:149.9860061572908%;" data-image-id="41300475314460">
-        <img
-          srcset="images/2/4.jpg?v=1751358143&width=165 165w,images/2/4.jpg?v=1751358143&width=360 360w,images/2/4.jpg?v=1751358143&width=533 533w,images/2/4.jpg?v=1751358143&width=720 720w,images/2/4.jpg?v=1751358143&width=940 940w,images/2/4.jpg?v=1751358143&width=1066 1066w,images/2/4.jpg?v=1751358143 3573w
-          "
-          src="images/2/2.jpg?v=1751358143&amp;width=720"
-          sizes="(min-width: 1300px) 295px, (min-width: 990px) calc((100vw - 120px) / 4), (min-width: 750px) ca lc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-          alt="Sandline Top"
-          class="lazyload scale-in first-image"
-          data-sizes="auto"
-          data-aspectratio="0.6667288673259937"
-          loading="lazy"
-          width="3573"
-          height="5359"
-        >
-        
- <img
-        srcset="images/2/5.jpg?v=1751358143&width=165 165w,images/2/5.jpg?v=1751358143&width=360 360w,images/2/5.jpg?v=1751358143&width=533 533w,images/2/5.jpg?v=1751358143&width=720 720w,images/2/5.jpg?v=1751358143&width=940 940w,images/2/5.jpg?v=1751358143&width=1066 1066w,images/2/5.jpg?v=1751358143 3536w
-        "
-        src="cdn/shop/files/2F9A9587b3e7.jpg?v=1751358143&amp;width=720"
-        sizes="(min-width: 1300px) 295px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-        alt="Sandline Top"
-        class="lazyload transition second-image"
-        data-sizes="auto"
-        data-aspectratio="0.6666666666666666"
-        loading="lazy"
-        width="3536"
-        height="5304"
-      >
-  </a>
-<div class="product-label rectangular_label ">
-    
-
-    </div><div class="product-card__overlay product-card__overlay_wl d-flex justify-content-center flex-column"><span data-toggle="tooltip" data-placement="left" data-tooltipalltimes="true" class="btn btn-theme gradient-theme-vertical product-card__overlay-btn js-btn-wishlist" title="Wishlist" data-handle="sandline-top">
-<svg class="svg-heart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M16.5429 4C13.4999 4 12 6.99984 12 6.99984C12 6.99984 10.5001 4 7.45712 4C4.98412 4 3.02579 6.06895 3.00048 8.53772C2.94892 13.6623 7.06573 17.3066 11.5782 20.3693C11.7026 20.4539 11.8495 20.4992 12 20.4992C12.1505 20.4992 12.2975 20.4539 12.4219 20.3693C16.9338 17.3066 21.0506 13.6623 20.9995 8.53772C20.9742 6.06895 19.0159 4 16.5429 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-    </span></div>
-  </div>
-  <div class="product-card__info"><ul class="product-card__swatch list-unstyled  sw_color round-color">
-</ul>
-
-    <a href="collections/azure/products/sandline-top.html" title="Sandline Top" class="d-block product-card__name  text-uppercase " id="dress2-name">Sandline Top</a>
-    
-<div style='' class='jdgm-widget jdgm-preview-badge  py-1 small'  data-id='10190358184220' data-auto-install="false" >
-      
-    </div>
-    
-  <div class="product-card__price " id="dress2-price"><span class="visually-hidden">Regular price</span>
-  Rs. 1,500.00
-</div>
-
-    <div class="product-form__item product-form__item--submit d-flex justify-content-end-lg flex-row align-items-center">
-      <span class="btn btn-theme btn-sm js-grid-cart d-inline-flex align-items-center " 
-        title="Add to Cart" 
-        data-id="52143753003292">
-        <div class="product-card__loading spinner-border" role="status"></div>
-        <span class="mr-2">Add to Cart </span>
-<svg class="svg-cart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M3.94727 6.86532L6.67857 3.56785V3.47363H17.4154L20.0525 6.86532M3.94727 6.86532V18.8304C3.94727 19.7725 4.79491 20.5263 5.73674 20.5263H18.263C19.2049 20.5263 20.0525 19.7725 20.0525 18.8304V6.86532M3.94727 6.86532H20.0525M15.6259 10.257C15.6259 12.1413 14.0248 13.6487 12.047 13.6487C10.0692 13.6487 8.37385 12.1413 8.37385 10.257" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg></span><span  class="btn btn-theme js-btn-quickview product-card__overlay-btn" data-toggle="modal" 
-        data-target="#jsQuickview" data-handle="sandline-top"
-        data-pavailable="true"
-         data-viewjdmg="<span class='jdgm-preview-badge' data-id='10190358184220'></span>" 
-         >
-        <span class="d-block" title="Quickshop">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11.9844 5.57178C8.50513 5.57178 4.93608 7.58553 2.12638 11.613C2.04618 11.7293 2.00223 11.8666 2.00008 12.0078C1.99794 12.149 2.03769 12.2877 2.11432 12.4063C4.27316 15.7856 7.79444 18.4284 11.9844 18.4284C16.1289 18.4284 19.7225 15.7776 21.8854 12.3907C21.9602 12.2744 22 12.139 22 12.0007C22 11.8624 21.9602 11.7271 21.8854 11.6108C19.7176 8.26273 16.0977 5.57178 11.9844 5.57178Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12.0029 15.5713C13.9753 15.5713 15.5742 13.9723 15.5742 12C15.5742 10.0276 13.9753 8.42871 12.0029 8.42871C10.0306 8.42871 8.43164 10.0276 8.43164 12C8.43164 13.9723 10.0306 15.5713 12.0029 15.5713Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
-</svg>
-<span class="icon__fallback-text">Quickshop</span><span class=" txt-short hide" >
-            
-          </span></span>
-      </span></div>
-  </div>
-</div></div><div class="col-1-5 col-md-6 col-sm-6 col-xs-6 col-6  col-item " 
-          data-aos="fade"  data-aos-delay="350" ><style>
-  .product-card__image-wr {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-}
-</style>
-
-
-<div class="product-card js-product-card product-card--style2 text-left" data-price="200000">
-  <div class="product-card__image-wr">
-    <a class="product-card__image js image-content__image-wrapper auto" href="collections/azure/products/sandline-trousers.html" style="padding-top:149.9860061572908%;" data-image-id="41300476625180">
-        <img
-          srcset="images/3/2.jpg?v=1751358182&width=165 165w,images/3/2.jpg?v=1751358182&width=360 360w,images/3/2.jpg?v=1751358182&width=533 533w,images/3/2.jpg?v=1751358182&width=720 720w,images/3/2.jpg?v=1751358182&width=940 940w,images/3/2.jpg?v=1751358182&width=1066 1066w,images/3/2.jpg?v=1751358182 3573w
-          "
-          src="cdn/shop/files/B69C4F59-B60D-4DF0-9464-4FC484E18B70_d62e229d-0f08-4941-9ab3-4daaeb7293132796.jpg?v=1751358182&amp;width=720"
-          sizes="(min-width: 1300px) 295px, (min-width: 990px) calc((100vw - 120px) / 4), (min-width: 750px) ca lc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-          alt="Sandline Trousers"
-          class="lazyload scale-in first-image"
-          data-sizes="auto"
-          data-aspectratio="0.6667288673259937"
-          loading="lazy"
-          width="3573"
-          height="5359"
-        >
-        
- <img
-        srcset="images/3/4.jpg?v=1751358182&width=165 165w,images/3/4.jpg?v=1751358182&width=360 360w,images/3/4.jpg?v=1751358182&width=533 533w,images/3/4.jpg?v=1751358182&width=720 720w,images/3/4.jpg?v=1751358182&width=940 940w,images/3/4.jpg?v=1751358182&width=1066 1066w,images/3/4.jpg?v=1751358182 3564w
-        "
-        src="cdn/shop/files/2F9A9598_dafce5fd-ab68-4e36-aa69-f18ba78c00e82796.jpg?v=1751358182&amp;width=720"
-        sizes="(min-width: 1300px) 295px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-        alt="Sandline Trousers"
-        class="lazyload transition second-image"
-        data-sizes="auto"
-        data-aspectratio="0.6666666666666666"
-        loading="lazy"
-        width="3564"
-        height="5346"
-      >
-  </a>
-<div class="product-label rectangular_label ">
-    
-
-    </div><div class="product-card__overlay product-card__overlay_wl d-flex justify-content-center flex-column"><span data-toggle="tooltip" data-placement="left" data-tooltipalltimes="true" class="btn btn-theme gradient-theme-vertical product-card__overlay-btn js-btn-wishlist" title="Wishlist" data-handle="sandline-trousers">
-<svg class="svg-heart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M16.5429 4C13.4999 4 12 6.99984 12 6.99984C12 6.99984 10.5001 4 7.45712 4C4.98412 4 3.02579 6.06895 3.00048 8.53772C2.94892 13.6623 7.06573 17.3066 11.5782 20.3693C11.7026 20.4539 11.8495 20.4992 12 20.4992C12.1505 20.4992 12.2975 20.4539 12.4219 20.3693C16.9338 17.3066 21.0506 13.6623 20.9995 8.53772C20.9742 6.06895 19.0159 4 16.5429 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-    </span></div>
-  </div>
-  <div class="product-card__info"><ul class="product-card__swatch list-unstyled  sw_color round-color">
-</ul>
-
-    <a href="collections/azure/products/sandline-trousers.html" title="Sandline Trousers" class="d-block product-card__name  text-uppercase " id="dress3-name">Sandline Trousers</a>
-    
-<div style='' class='jdgm-widget jdgm-preview-badge  py-1 small'  data-id='10190359068956' data-auto-install="false" >
-      
-    </div>
-    
-  <div class="product-card__price " id="dress3-price"><span class="visually-hidden">Regular price</span>
-  Rs. 2,000.00
-</div>
-
-    <div class="product-form__item product-form__item--submit d-flex justify-content-end-lg flex-row align-items-center">
-      <span class="btn btn-theme btn-sm js-grid-cart d-inline-flex align-items-center " 
-        title="Add to Cart" 
-        data-id="52122676035868">
-        <div class="product-card__loading spinner-border" role="status"></div>
-        <span class="mr-2">Add to Cart </span>
-<svg class="svg-cart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M3.94727 6.86532L6.67857 3.56785V3.47363H17.4154L20.0525 6.86532M3.94727 6.86532V18.8304C3.94727 19.7725 4.79491 20.5263 5.73674 20.5263H18.263C19.2049 20.5263 20.0525 19.7725 20.0525 18.8304V6.86532M3.94727 6.86532H20.0525M15.6259 10.257C15.6259 12.1413 14.0248 13.6487 12.047 13.6487C10.0692 13.6487 8.37385 12.1413 8.37385 10.257" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg></span><span  class="btn btn-theme js-btn-quickview product-card__overlay-btn" data-toggle="modal" 
-        data-target="#jsQuickview" data-handle="sandline-trousers"
-        data-pavailable="true"
-         data-viewjdmg="<span class='jdgm-preview-badge' data-id='10190359068956'></span>" 
-         >
-        <span class="d-block" title="Quickshop">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11.9844 5.57178C8.50513 5.57178 4.93608 7.58553 2.12638 11.613C2.04618 11.7293 2.00223 11.8666 2.00008 12.0078C1.99794 12.149 2.03769 12.2877 2.11432 12.4063C4.27316 15.7856 7.79444 18.4284 11.9844 18.4284C16.1289 18.4284 19.7225 15.7776 21.8854 12.3907C21.9602 12.2744 22 12.139 22 12.0007C22 11.8624 21.9602 11.7271 21.8854 11.6108C19.7176 8.26273 16.0977 5.57178 11.9844 5.57178Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12.0029 15.5713C13.9753 15.5713 15.5742 13.9723 15.5742 12C15.5742 10.0276 13.9753 8.42871 12.0029 8.42871C10.0306 8.42871 8.43164 10.0276 8.43164 12C8.43164 13.9723 10.0306 15.5713 12.0029 15.5713Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
-</svg>
-<span class="icon__fallback-text">Quickshop</span><span class=" txt-short hide" >
-            
-          </span></span>
-      </span></div>
-  </div>
-</div></div><div class="col-1-5 col-md-6 col-sm-6 col-xs-6 col-6  col-item " 
-          data-aos="fade"  data-aos-delay="400" ><style>
-  .product-card__image-wr {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-}
-</style>
-
-
-
-
-<!-- <div class="product-card js-product-card product-card--style2 text-left" data-price="245000">
-  <div class="product-card__image-wr">
-    <a class="product-card__image js image-content__image-wrapper auto" href="collections/azure/products/lemon-soul-dress.html" style="padding-top:150.00000000000003%;" data-image-id="41300458373404">
-        <img
-          srcset="//kashique.in/cdn/shop/files/2F9A9864.jpg?v=1751963890&width=165 165w,//kashique.in/cdn/shop/files/2F9A9864.jpg?v=1751963890&width=360 360w,//kashique.in/cdn/shop/files/2F9A9864.jpg?v=1751963890&width=533 533w,//kashique.in/cdn/shop/files/2F9A9864.jpg?v=1751963890&width=720 720w,//kashique.in/cdn/shop/files/2F9A9864.jpg?v=1751963890&width=940 940w,//kashique.in/cdn/shop/files/2F9A9864.jpg?v=1751963890&width=1066 1066w,//kashique.in/cdn/shop/files/2F9A9864.jpg?v=1751963890 3648w
-          "
-          src="cdn/shop/files/2F9A9864513d.jpg?v=1751963890&amp;width=720"
-          sizes="(min-width: 1300px) 295px, (min-width: 990px) calc((100vw - 120px) / 4), (min-width: 750px) ca lc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-          alt="Lemon Soul Dress"
-          class="lazyload scale-in first-image"
-          data-sizes="auto"
-          data-aspectratio="0.6666666666666666"
-          loading="lazy"
-          width="3648"
-          height="5472"
-        >
-        
- <img
-        srcset="//kashique.in/cdn/shop/files/2F9A9818.jpg?v=1751963890&width=165 165w,//kashique.in/cdn/shop/files/2F9A9818.jpg?v=1751963890&width=360 360w,//kashique.in/cdn/shop/files/2F9A9818.jpg?v=1751963890&width=533 533w,//kashique.in/cdn/shop/files/2F9A9818.jpg?v=1751963890&width=720 720w,//kashique.in/cdn/shop/files/2F9A9818.jpg?v=1751963890&width=940 940w,//kashique.in/cdn/shop/files/2F9A9818.jpg?v=1751963890&width=1066 1066w,//kashique.in/cdn/shop/files/2F9A9818.jpg?v=1751963890 3504w
-        "
-        src="cdn/shop/files/2F9A9818513d.jpg?v=1751963890&amp;width=720"
-        sizes="(min-width: 1300px) 295px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-        alt="Lemon Soul Dress"
-        class="lazyload transition second-image"
-        data-sizes="auto"
-        data-aspectratio="0.6667935299714558"
-        loading="lazy"
-        width="3504"
-        height="5255"
-      >
-  </a>
-<div class="product-label rectangular_label ">
-    
-
-    </div><div class="product-card__overlay product-card__overlay_wl d-flex justify-content-center flex-column"><span data-toggle="tooltip" data-placement="left" data-tooltipalltimes="true" class="btn btn-theme gradient-theme-vertical product-card__overlay-btn js-btn-wishlist" title="Wishlist" data-handle="lemon-soul-dress">
-<svg class="svg-heart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M16.5429 4C13.4999 4 12 6.99984 12 6.99984C12 6.99984 10.5001 4 7.45712 4C4.98412 4 3.02579 6.06895 3.00048 8.53772C2.94892 13.6623 7.06573 17.3066 11.5782 20.3693C11.7026 20.4539 11.8495 20.4992 12 20.4992C12.1505 20.4992 12.2975 20.4539 12.4219 20.3693C16.9338 17.3066 21.0506 13.6623 20.9995 8.53772C20.9742 6.06895 19.0159 4 16.5429 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-    </span></div>
-  </div>
-  <div class="product-card__info"><ul class="product-card__swatch list-unstyled  sw_color round-color">
-</ul>
-
-    <a href="collections/azure/products/lemon-soul-dress.html" title="Lemon Soul Dress" class="d-block product-card__name  text-uppercase ">Lemon Soul Dress</a>
-    
-<div style='' class='jdgm-widget jdgm-preview-badge  py-1 small'  data-id='10188314444060' data-auto-install="false" >
-      
-    </div>
-    
-  <div class="product-card__price "><span class="visually-hidden">Regular price</span>
-  Rs. 2,450.00
-</div>
-
-    <div class="product-form__item product-form__item--submit d-flex justify-content-end-lg flex-row align-items-center">
-      <span class="btn btn-theme btn-sm js-grid-cart d-inline-flex align-items-center " 
-        title="Add to Cart" 
-        data-id="52143766044956">
-        <div class="product-card__loading spinner-border" role="status"></div>
-        <span class="mr-2">Add to Cart </span>
-<svg class="svg-cart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M3.94727 6.86532L6.67857 3.56785V3.47363H17.4154L20.0525 6.86532M3.94727 6.86532V18.8304C3.94727 19.7725 4.79491 20.5263 5.73674 20.5263H18.263C19.2049 20.5263 20.0525 19.7725 20.0525 18.8304V6.86532M3.94727 6.86532H20.0525M15.6259 10.257C15.6259 12.1413 14.0248 13.6487 12.047 13.6487C10.0692 13.6487 8.37385 12.1413 8.37385 10.257" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg></span><span  class="btn btn-theme js-btn-quickview product-card__overlay-btn" data-toggle="modal" 
-        data-target="#jsQuickview" data-handle="lemon-soul-dress"
-        data-pavailable="true"
-         data-viewjdmg="<span class='jdgm-preview-badge' data-id='10188314444060'></span>" 
-         >
-        <span class="d-block" title="Quickshop">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11.9844 5.57178C8.50513 5.57178 4.93608 7.58553 2.12638 11.613C2.04618 11.7293 2.00223 11.8666 2.00008 12.0078C1.99794 12.149 2.03769 12.2877 2.11432 12.4063C4.27316 15.7856 7.79444 18.4284 11.9844 18.4284C16.1289 18.4284 19.7225 15.7776 21.8854 12.3907C21.9602 12.2744 22 12.139 22 12.0007C22 11.8624 21.9602 11.7271 21.8854 11.6108C19.7176 8.26273 16.0977 5.57178 11.9844 5.57178Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12.0029 15.5713C13.9753 15.5713 15.5742 13.9723 15.5742 12C15.5742 10.0276 13.9753 8.42871 12.0029 8.42871C10.0306 8.42871 8.43164 10.0276 8.43164 12C8.43164 13.9723 10.0306 15.5713 12.0029 15.5713Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
-</svg>
-<span class="icon__fallback-text">Quickshop</span><span class=" txt-short hide" >
-            
-          </span></span>
-      </span></div>
-  </div>
-</div></div><div class="col-1-5 col-md-6 col-sm-6 col-xs-6 col-6  col-item " 
-          data-aos="fade"  data-aos-delay="500" ><style>
-  .product-card__image-wr {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-}
-</style> -->
-
-
-<div class="product-card js-product-card product-card--style2 text-left" data-price="200000">
-  <div class="product-card__image-wr">
-    <a class="product-card__image js image-content__image-wrapper auto" href="collections/azure/products/azure-skirt.html" style="padding-top:150.00000000000003%;" data-image-id="41300470661404">
-        <img
-          srcset="/images/4/3.jpg?v=1751357961&width=165 165w,/images/4/3.jpg?v=1751357961&width=360 360w,/images/4/3.jpg?v=1751357961&width=533 533w,/images/4/3.jpg?v=1751357961&width=720 720w,/images/4/3.jpg?v=1751357961&width=940 940w,/images/4/3.jpg?v=1751357961&width=1066 1066w,/images/4/3.jpg?v=1751357961 3648w
-          "
-          src="cdn/shop/files/2F9A9661_abc0bc65-5574-4503-949f-27d40d5754e7557b.jpg?v=1751357961&amp;width=720"
-          sizes="(min-width: 1300px) 295px, (min-width: 990px) calc((100vw - 120px) / 4), (min-width: 750px) ca lc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-          alt="Azure Skirt"
-          class="lazyload scale-in first-image"
-          data-sizes="auto"
-          data-aspectratio="0.6666666666666666"
-          loading="lazy"
-          width="3648"
-          height="5472"
-        >
-        
- <img
-        srcset="images/4/1.jpg?v=1751357961&width=165 165w,images/4/1.jpg?v=1751357961&width=360 360w,images/4/1.jpg?v=1751357961&width=533 533w,images/4/1.jpg?v=1751357961&width=720 720w,images/4/1.jpg?v=1751357961&width=940 940w,images/4/1.jpg?v=1751357961&width=1066 1066w,images/4/1.jpg?v=1751357961 3483w
-        "
-        src="cdn/shop/files/2F9A9644_faf23eac-77fd-4322-a08d-dae536f54343557b.jpg?v=1751357961&amp;width=720"
-        sizes="(min-width: 1300px) 295px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-        alt="Azure Skirt"
-        class="lazyload transition second-image"
-        data-sizes="auto"
-        data-aspectratio="0.6667304747320061"
-        loading="lazy"
-        width="3483"
-        height="5224"
-      >
-  </a>
-<div class="product-label rectangular_label ">
-    
-<!-- <span class="product-tag product-tag--absolute text-uppercase " aria-hidden="true" style="background-color: #974d38;color:#ffffff">
-        Sold Out
-    </span> -->
-    
-    </div><div class="product-card__overlay product-card__overlay_wl d-flex justify-content-center flex-column"><span data-toggle="tooltip" data-placement="left" data-tooltipalltimes="true" class="btn btn-theme gradient-theme-vertical product-card__overlay-btn js-btn-wishlist" title="Wishlist" data-handle="azure-skirt">
-<svg class="svg-heart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M16.5429 4C13.4999 4 12 6.99984 12 6.99984C12 6.99984 10.5001 4 7.45712 4C4.98412 4 3.02579 6.06895 3.00048 8.53772C2.94892 13.6623 7.06573 17.3066 11.5782 20.3693C11.7026 20.4539 11.8495 20.4992 12 20.4992C12.1505 20.4992 12.2975 20.4539 12.4219 20.3693C16.9338 17.3066 21.0506 13.6623 20.9995 8.53772C20.9742 6.06895 19.0159 4 16.5429 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-    </span></div>
-  </div>
-  <div class="product-card__info"><ul class="product-card__swatch list-unstyled  sw_color round-color">
-</ul>
-
-    <a href="collections/azure/products/azure-skirt.html" title="Azure Skirt" class="d-block product-card__name  text-uppercase " id="dress4-name">Azure Skirt</a>
-    
-<div style='' class='jdgm-widget jdgm-preview-badge  py-1 small'  data-id='10190357758236' data-auto-install="false" >
-      
-    </div>
-    
-  <div class="product-card__price " id="dress4-price"><span class="visually-hidden">Regular price</span>
-  Rs. 2,000.00
-</div>
-
-    <div class="product-form__item product-form__item--submit d-flex justify-content-end-lg flex-row align-items-center">
-      <span class="btn btn-theme btn-sm js-grid-cart d-inline-flex align-items-center " 
-        title="Add to Cart" 
-        data-id="52122676035868">
-        <div class="product-card__loading spinner-border" role="status"></div>
-        <span class="mr-2">Add to Cart </span>
-<svg class="svg-cart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M3.94727 6.86532L6.67857 3.56785V3.47363H17.4154L20.0525 6.86532M3.94727 6.86532V18.8304C3.94727 19.7725 4.79491 20.5263 5.73674 20.5263H18.263C19.2049 20.5263 20.0525 19.7725 20.0525 18.8304V6.86532M3.94727 6.86532H20.0525M15.6259 10.257C15.6259 12.1413 14.0248 13.6487 12.047 13.6487C10.0692 13.6487 8.37385 12.1413 8.37385 10.257" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg></span><span  class="btn btn-theme js-btn-quickview product-card__overlay-btn" data-toggle="modal" 
-        data-target="#jsQuickview" data-handle="sandline-trousers"
-        data-pavailable="true"
-         data-viewjdmg="<span class='jdgm-preview-badge' data-id='10190359068956'></span>" 
-         >
-        <span class="d-block" title="Quickshop">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11.9844 5.57178C8.50513 5.57178 4.93608 7.58553 2.12638 11.613C2.04618 11.7293 2.00223 11.8666 2.00008 12.0078C1.99794 12.149 2.03769 12.2877 2.11432 12.4063C4.27316 15.7856 7.79444 18.4284 11.9844 18.4284C16.1289 18.4284 19.7225 15.7776 21.8854 12.3907C21.9602 12.2744 22 12.139 22 12.0007C22 11.8624 21.9602 11.7271 21.8854 11.6108C19.7176 8.26273 16.0977 5.57178 11.9844 5.57178Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12.0029 15.5713C13.9753 15.5713 15.5742 13.9723 15.5742 12C15.5742 10.0276 13.9753 8.42871 12.0029 8.42871C10.0306 8.42871 8.43164 10.0276 8.43164 12C8.43164 13.9723 10.0306 15.5713 12.0029 15.5713Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
-</svg>
-<span class="icon__fallback-text">Quickshop</span><span class=" txt-short hide" >
-            
-          </span></span>
-      </span></div>
-  </div>
-</div></div>
         <div class="text-center col-12">
           <a class="btn btn-underline btn-underline-white" href="#">show all</a>
         </div>
@@ -4249,218 +3497,41 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
   </div>
 </div>
 
-<div id="shopify-section-template--24261670928668__product_list_swiper_rgAwrb" class="shopify-section index-section"><!-- product-list-swiper.liquid --><style>
-  .customstyletemplate--24261670928668__product_list_swiper_rgAwrb{
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-    background-size: auto !important;
-    --or-width-banner : 30%;
-    
-  }.productswiper .swiper-container {
-        overflow: visible;
-    }.productlist-swiper .product-card, .productlist-swiper .product-card .product-card__info{
-        margin-bottom: 0;
-    }
-    .productlist-swiper .product-card__image-wr{
-      --g-color-heading : #974d38;
-      --g-color-heading-rgb:151, 77, 56;
-    }
-    .productlist-swiper .image-content__image{
-      height:100%;
-      object-fit:cover;
-    }
-    .productlist-banner {
-      width:var(--or-width-banner) !important;
-    }
-    .product-image__banner{
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
-      z-index:1;
-      padding:32px;
-      background:rgba(var(--bg-overlay-rgba),var(--bg-opacity));
-    }
-    @media (max-width:749px){
-      .productswiper .swiper-container {
-          overflow: visible;
-      }
-      .productswiper .container-p .swiper-slide{
-        width: 74%  !important;
-        margin-right:20px !important;
-      }
-      .productswiper .container-p .productlist-banner {
-        width:75% !important;
-      }
-    }
-    @media (min-width:750px){
-      .productlist-wrapper .swiper-button-prev{
-        left: -58px;
-      } 
-      .productlist-wrapper .swiper-button-next{
-        right: -58px;
-      } 
-    }
-</style>
-<div class="customstyletemplate--24261670928668__product_list_swiper_rgAwrb productswiper lazyload" data-aos=""
-  data-bgset=""
-  data-sizes="auto"
-  data-parent-fit="cover" ><style data-shopify>.customstyletemplate--24261670928668__product_list_swiper_rgAwrb{
+<div id="shopify-section-template--24261670928668__featured_products_64iAG7" class="shopify-section index-section"><!-- featured-products.liquid -->
+<div class="customstyletemplate--24261670928668__featured_products_64iAG7 " ><style data-shopify>.customstyletemplate--24261670928668__featured_products_64iAG7{
       background-color:#ffffff;
-      padding: 0px 0px 0px 0px;
-      margin: 50px 0px 50px 0px;
+      padding: 40px 0px 0px 0px;
+      margin: 0px 0px 0px 0px;
       
     }@media (max-width:750px){
-      .customstyletemplate--24261670928668__product_list_swiper_rgAwrb{
+      .customstyletemplate--24261670928668__featured_products_64iAG7{
         padding: 40px 0px 40px 0px;
-        margin: 40px 0px 0px 0px
+        margin: 0px 0px 0px 0px
       }
-    }</style><div >
-    <div class="section-block">
-      <div class="container-fluid"><!-- section-heading.liquid - Apply for all section title --><h3 class="section-title-1 text-left   mb-5 " data-aos="" data-aos-duration="500">
-    <span>New Top Collection</span>
-  </h3></div>
-      <div class="container-fluid container-p">
-      <div class="productlist-wrapper dots-negative swiper-wrapper-template--24261670928668__product_list_swiper_rgAwrb position-relative">
-        <div class="productlist-swiper swiper-container swipercol-template--24261670928668__product_list_swiper_rgAwrb  pb-5 " id="Productlist-template--24261670928668__product_list_swiper_rgAwrb"
-          data-section-id="template--24261670928668__product_list_swiper_rgAwrb"  
-          data-section-type="swipercustom"
-          data-perview-desktop="3"
-          data-space-between="20"
-          data-perview-mobile=" 1.32 "
-          >
-          <div class="swiper-wrapper"><div class="productlist-banner swiper-slide h-100">
-              <div class="image-content__image-container h-100 overflow-hidden"><div class="image-content__image-wrapper h-100" >
-                      
-                      <img class="image-content__image lazyload scale-in"
-                          src="images/5/1.jpg?v=1750408626&amp;width=720"
-                          data-src="images/5/1.jpg?v=1750408626&width={width}"
-                          data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]"
-                          data-aspectratio="0.66650390625"
-                          data-sizes="auto"
-                          alt=""
-                          loading="lazy"
-                          width="2730"
-                          height="4096"> 
-                  </div><div class="product-image__banner position-absolute d-flex align-items-center justify-content-center text-center" style="
-                        --bg-overlay-rgba: 0, 0, 0;
-                        --bg-opacity: 0.2;--g-font-color-subtop: #ffffff;
-                        --g-color-heading :  #ffffff;
-                        --color-body-text : #ffffff;
-                        --color-body-text-rgb: 255, 255,  255 ;">
-                        <div  class="product-image__banner_in"><h3 class="mb-2 h2"><a href="#" >Get Best Deals</a></h3></div>
-                </div>
-              </div>
-            </div><div class="productlist-item swiper-slide">
-                <div data-aos=""  data-aos-delay="100"><style>
-  .product-card__image-wr {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-}
-</style>
-
-
-
-
-<div class="product-card js-product-card product-card--style2 text-left" data-price="225000">
-  <div class="product-card__image-wr">
-    <a class="product-card__image js image-content__image-wrapper auto" href="products/lunora-dress.html" style="padding-top:150.00000000000003%;" data-image-id="41300480819484">
-        <img
-          srcset="images/5/4.jpg?v=1751358292&width=165 165w,images/5/4.jpg?v=1751358292&width=360 360w,images/5/4.jpg?v=1751358292&width=533 533w,images/5/4.jpg?v=1751358292&width=720 720w,images/5/4.jpg?v=1751358292&width=940 940w,images/5/4.jpg?v=1751358292&width=1066 1066w,images/5/4.jpg?v=1751358292 3542w
-          "
-          src="cdn/shop/files/2F9A97007e5f.jpg?v=1751358292&amp;width=720"
-          sizes="(min-width: 1300px) 295px, (min-width: 990px) calc((100vw - 120px) / 4), (min-width: 750px) ca lc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-          alt="Lunora Dress"
-          class="lazyload scale-in first-image"
-          data-sizes="auto"
-          data-aspectratio="0.6666666666666666"
-          loading="lazy"
-          width="3542"
-          height="5313"
-        >
-        
- <img
-        srcset="images/5/3.jpg?v=1751358292&width=165 165w,images/5/3.jpg?v=1751358292&width=360 360w,images/5/3.jpg?v=1751358292&width=533 533w,images/5/3.jpg?v=1751358292&width=720 720w,images/5/3.jpg?v=1751358292&width=940 940w,images/5/3.jpg?v=1751358292&width=1066 1066w,images/5/3.jpg?v=1751358292 3059w
-        "
-        src="cdn/shop/files/2F9A97327e5f.jpg?v=1751358292&amp;width=720"
-        sizes="(min-width: 1300px) 295px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-        alt="Lunora Dress"
-        class="lazyload transition second-image"
-        data-sizes="auto"
-        data-aspectratio="0.6665940292002615"
-        loading="lazy"
-        width="3059"
-        height="4589"
-      >
-  </a>
-<div class="product-label rectangular_label ">
+    }</style><div class="container-fluid">
+    <div class="section-block"><!-- section-heading.liquid - Apply for all section title --><h3 class="section-title-1 text-left   mb-5 " data-aos="fade" data-aos-duration="500">
+    <div style="display: flex; justify-content: center;"><span>New Tops Collection</span></div>
+  </h3><div class="row  " data-aos="fade" id="newTops">
     
-
-    </div><div class="product-card__overlay product-card__overlay_wl d-flex justify-content-center flex-column"><span data-toggle="tooltip" data-placement="left" data-tooltipalltimes="true" class="btn btn-theme gradient-theme-vertical product-card__overlay-btn js-btn-wishlist" title="Wishlist" data-handle="lunora-dress">
-<svg class="svg-heart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M16.5429 4C13.4999 4 12 6.99984 12 6.99984C12 6.99984 10.5001 4 7.45712 4C4.98412 4 3.02579 6.06895 3.00048 8.53772C2.94892 13.6623 7.06573 17.3066 11.5782 20.3693C11.7026 20.4539 11.8495 20.4992 12 20.4992C12.1505 20.4992 12.2975 20.4539 12.4219 20.3693C16.9338 17.3066 21.0506 13.6623 20.9995 8.53772C20.9742 6.06895 19.0159 4 16.5429 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-    </span></div>
-  </div>
-  <div class="product-card__info"><ul class="product-card__swatch list-unstyled  sw_color round-color">
-</ul>
-
-    <a href="products/lunora-dress.html" title="Lunora Dress" class="d-block product-card__name  text-uppercase " id="top1-name">Lunora Dress</a>
-    
-<div style='' class='jdgm-widget jdgm-preview-badge  py-1 small'  data-id='10188299698460' data-auto-install="false" >
-      
     </div>
-    
-  <div class="product-card__price " id="top1-price"><span class="visually-hidden">Regular price</span>
-  Rs. 2,250.00
+        <div class="text-center col-12">
+          <a class="btn btn-underline btn-underline-white" href="#">show all</a>
+        </div>
+        
+      </div></div>
+  </div>
 </div>
 
-    <div class="product-form__item product-form__item--submit d-flex justify-content-end-lg flex-row align-items-center">
-      <span class="btn btn-theme btn-sm js-grid-cart d-inline-flex align-items-center " 
-        title="Add to Cart" 
-        data-id="52100384588060">
-        <div class="product-card__loading spinner-border" role="status"></div>
-        <span class="mr-2">Add to Cart </span>
-<svg class="svg-cart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M3.94727 6.86532L6.67857 3.56785V3.47363H17.4154L20.0525 6.86532M3.94727 6.86532V18.8304C3.94727 19.7725 4.79491 20.5263 5.73674 20.5263H18.263C19.2049 20.5263 20.0525 19.7725 20.0525 18.8304V6.86532M3.94727 6.86532H20.0525M15.6259 10.257C15.6259 12.1413 14.0248 13.6487 12.047 13.6487C10.0692 13.6487 8.37385 12.1413 8.37385 10.257" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg></span><span  class="btn btn-theme js-btn-quickview product-card__overlay-btn" data-toggle="modal" 
-        data-target="#jsQuickview" data-handle="lunora-dress"
-        data-pavailable="true"
-         data-viewjdmg="<span class='jdgm-preview-badge' data-id='10188299698460'></span>" 
-         >
-        <span class="d-block" title="Quickshop">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11.9844 5.57178C8.50513 5.57178 4.93608 7.58553 2.12638 11.613C2.04618 11.7293 2.00223 11.8666 2.00008 12.0078C1.99794 12.149 2.03769 12.2877 2.11432 12.4063C4.27316 15.7856 7.79444 18.4284 11.9844 18.4284C16.1289 18.4284 19.7225 15.7776 21.8854 12.3907C21.9602 12.2744 22 12.139 22 12.0007C22 11.8624 21.9602 11.7271 21.8854 11.6108C19.7176 8.26273 16.0977 5.57178 11.9844 5.57178Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12.0029 15.5713C13.9753 15.5713 15.5742 13.9723 15.5742 12C15.5742 10.0276 13.9753 8.42871 12.0029 8.42871C10.0306 8.42871 8.43164 10.0276 8.43164 12C8.43164 13.9723 10.0306 15.5713 12.0029 15.5713Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
-</svg>
-<span class="icon__fallback-text">Quickshop</span><span class=" txt-short hide" >
-            
-          </span></span>
-      </span></div>
-  </div>
-</div></div>
-            </div></div><div class="swiper-scrollbar"></div></div><div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div></div><div class="pt-4 text-center">
-          <a href="#" class="btn btn-underline">
-            shop now
-          </a>
-        </div></div>
-    </div>
-  </div>
-  </div>
-  
-  </div><section id="shopify-section-template--24261670928668__video_with_text_GpFQDf" class="shopify-section shopify-section"><section class="video-text-section container-fluid">
+<section id="shopify-section-template--24261670928668__video_with_text_GpFQDf" class="shopify-section shopify-section"><section class="video-text-section container-fluid">
   <div class="video-side">
     <video autoplay muted loop playsinline>
-      <source src="https://cdn.shopify.com/videos/c/o/v/08127a863404497eaa7e48829482cee6.mp4" type="video/mp4">
+      <source src="videos/main.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
   <div class="text-side">
-    <h2>Effortless, ethical and always in season.</h2>
-    <p>We believe in taking our time to do things right. Rather than chasing trends, we create clothing that lasts for endless summers ahead. Our dedication to thoughtful production allows us to prioritize quality over quantity, choosing to focus on fewer, more meaningful releases rather than rushing to keep up with seasonal pressures. With our ‘no-leftover’ policy, we only produce what we think we will sell—because landfills have no place in our journey.</p>
-    
+    <h2>Timeless Silhouettes, Consciously Crafted.</h2>
+    <p>True style isn't about chasing trends—it's about investing in pieces that tell a story. We are dedicated to creating thoughtfully designed clothing that transcends seasons. By focusing on superior craftsmanship and quality over quantity, each garment is made to be a cherished part of your wardrobe for years to come. Our commitment to sustainable practices means we produce only what we believe in, ensuring that beauty and responsibility go hand in hand.</p>
       <a class="video-button" href="collections.html">SHOP NOW</a>
     
   </div>
@@ -4506,19 +3577,23 @@ width:50%;
 
 .video-button {
   padding: 12px 30px;
-  border: 1px solid #000;
-  background-color: transparent;
+  border-radius: 40px;
+  border: none;
+  background-image: linear-gradient(to right, #440A08, #320200);
   text-decoration: none;
   font-weight: 600;
-  color: #000;
-  transition: all 0.3s ease;
+  color: white !important; /* Use !important to force the color override */
+  transition: all 0.4s ease;
   display: inline-block;
+  cursor: pointer;
 }
 
 .video-button:hover {
-  background-color: #000;
-  color: #fff;
-  cursor: pointer;
+  background-image: none; /* MUST set background-image to none */
+  background-color: white;
+  color: black !important; /* Use !important here as well for consistency */
+  border: 1px solid black; /* Optional: Add a border to avoid a plain white look */
+  transform: scale(1.05);
 }
 
 /* Responsive */
@@ -4547,208 +3622,8 @@ width:50%;
 </style>
 
 
-</section><div id="shopify-section-template--24261670928668__featured_collections_5_bPpWNz" class="shopify-section index-section"><!-- featured-collections-5.liquid -->
-<style>
-.customstyletemplate--24261670928668__featured_collections_5_bPpWNz .collection-card__image .photo-wrapper.square{
-  padding-top: 100% !important;
-}
-.customstyletemplate--24261670928668__featured_collections_5_bPpWNz .collection-card__image .photo-wrapper.landscape{
-  padding-top:  75% !important;
-}
-.customstyletemplate--24261670928668__featured_collections_5_bPpWNz .collection-card__image .photo-wrapper.portrait{
-  padding-top: 130% !important;
-}
-.customstyletemplate--24261670928668__featured_collections_5_bPpWNz .collection-card__image .photo-wrapper.wide{
-  padding-top: 60% !important;
-}
-.collection-card__image .photo-wrapper.square img, .collection-card__image .photo-wrapper.landscape img, .collection-card__image .photo-wrapper.portrait img, .collection-card__image .photo-wrapper.wide img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-.collection-grid{
-  
-    row-gap:var(--g-gutter);
-  
-}
-.collection-collage{
-display:grid;
-grid-template-columns: 1fr 1fr;
+</section>
 
-  column-gap: var(--g-gutter);
-  row-gap:var(--g-gutter);
-
-}
-
-.collection-collage .collage-item{ 
-  height:100%;
-}
-.collection-collage .collage-item .hv-image{ 
-  padding:0 !important;
-  
-    height:calc((670px/2) - var(--g-hgutter));
-  
-}
-.collection-collage .collage-item .hv-image img{ 
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.collection-collage.collage-3{
-  grid-template-columns: 1fr 1fr 1fr;
-}
-.collection-collage.collage-4{
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-.collection-collage.collage-5{
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-@media (min-width:749px){
-  .collection-collage .collage-item-big{
-    grid-row: auto / span 2;
-  }
-  .collection-collage .collage-item-big .hv-image{
-    padding:0 !important;
-    height:670px !important;
-  }
-  .collection-collage.collage-4 .collage-item-big{
-    grid-column: 1 / 3;
-    grid-row: 1 / 4;
-  }
-  .collection-collage.collage-4 .collage-item:nth-child(2){
-    grid-column: 3 / 5;
-    grid-row: 1;
-  }
-  .collection-collage.collage-5 .collage-item-big{
-    grid-column: 1 / 3;
-    grid-row: 1 / 4;
-  }
-}
-@media (max-width:749px){
-  .collection-collage{
-    grid-template-columns: auto !important;
-    padding:0 15px;
-  }
-}
-</style><div class="customstyletemplate--24261670928668__featured_collections_5_bPpWNz " data-aos="fade-up"><style data-shopify>.customstyletemplate--24261670928668__featured_collections_5_bPpWNz{
-      background-color:#ffffff;
-      padding: 40px 0px 0px 0px;
-      margin: 0px 0px 0px 0px;
-      
-    }.customstyletemplate--24261670928668__featured_collections_5_bPpWNz .row{
-      --g-gutter:30px;
-      --g-hgutter: 15px;
-    }@media (max-width:750px){
-      .customstyletemplate--24261670928668__featured_collections_5_bPpWNz{
-        padding: 40px 0px 40px 0px;
-        margin: 0px 0px 0px 0px
-      }
-    }</style><div class="section-block" >
-          <div class="container-fluid"><!-- section-heading.liquid - Apply for all section title --><h3 class="section-title-1 text-left   mb-5 " data-aos="fade-up" data-aos-duration="500">
-    <span>Curated For You</span>
-  </h3><div class="collection-grid  row " id="collection-grid-template--24261670928668__featured_collections_5_bPpWNz"><div class="collect-grid-collection_xxzCqa 
-                     col-lg-3 
-                    
-                     collage-item-big 
-                    " >
-                    <style>
-                      .collect-grid-collection_xxzCqa {
-                        --g-color-heading:#ffffff;
-                      }
-                      .collect-grid-collection_xxzCqa .item-counts{
-                        color: #ffffff;
-                      }
-                      .collect-grid-collection_xxzCqa .hv-image:before{
-                          --color-gradient : 34, 34, 34;
-                          content:"";
-                          position:absolute;
-                          top:0;
-                          left:0;
-                          right:0;
-                          bottom:0;
-                          z-index:1;background-color: rgb(var(--color-gradient), 0);transition:opacity 0.3s ease;
-                      }
-                    </style><div class="collection-card-3" >
-                        <div class="collection-card__image overflow-hidden position-relative image-content__image-container">
-                          <a class="hv-image banner-theme photo-wrapper image-content__image-wrapper portrait" href="collections/co-ord-set.html"style="padding-top:150.06593406593404%;"><img 
-                                class="lazyload scale-in" 
-                                src="images/2/4.jpg?crop=center&amp;height=1&amp;v=1750407534&amp;width=1"
-                                data-srcset="images/2/4.jpg?v=1750407534&amp;width={width}"
-                                data-widths="[360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
-                                data-aspectratio="0.666373755125952"
-                                data-sizes="auto"
-                                alt= Co-Ord Set
-                                loading="lazy"
-                                width="2275"
-                                height="3414"
-                              ></a><div class="m-0 type-onimage position-absolute collection-card__meta w-100 d-flex flex-column h-100 justify-content-center p-4 text-center">
-                            <h4 class="mb-1 title-collection h4">
-                              <a class="" href="collections/co-ord-set.html">
-                                Dresses
-                              </a>
-                            </h4>
-                              <p class="item-counts ">
-                          5 Items
-</p> 
-                          </div>
-                        </div>
-                      </div>
-                  </div><div class="collect-grid-collection_mcm737 
-                     col-lg-3 
-                    
-                    
-                    " >
-                    <style>
-                      .collect-grid-collection_mcm737 {
-                        --g-color-heading:#974d38;
-                      }
-                      .collect-grid-collection_mcm737 .item-counts{
-                        color: #974d38;
-                      }
-                      .collect-grid-collection_mcm737 .hv-image:before{
-                          --color-gradient : 34, 34, 34;
-                          content:"";
-                          position:absolute;
-                          top:0;
-                          left:0;
-                          right:0;
-                          bottom:0;
-                          z-index:1;background-color: rgb(var(--color-gradient), 0);transition:opacity 0.3s ease;
-                      }
-                    </style><div class="collection-card-3" >
-                        <div class="collection-card__image overflow-hidden position-relative image-content__image-container">
-                          <a class="hv-image banner-theme photo-wrapper image-content__image-wrapper portrait" href="collections/trousers.html"style="padding-top:150.03663003663004%;"><img 
-                                class="lazyload scale-in" 
-                                src="images/5/1.jpg?crop=center&amp;height=1&amp;v=1750748314&amp;width=1"
-                                data-srcset="images/5/1.jpg?v=1750748314&amp;width={width}"
-                                data-widths="[360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
-                                data-aspectratio="0.66650390625"
-                                data-sizes="auto"
-                                alt= Tops
-                                loading="lazy"
-                                width="2730"
-                                height="4096"
-                              ></a><div class="m-0 type-onimage position-absolute collection-card__meta w-100 d-flex flex-column h-100 justify-content-center p-4 text-center">
-                            <h4 class="mb-1 title-collection h4">
-                              <a class="" href="collections/trousers.html">
-                                Tops
-                              </a>
-                            </h4>
-                              <p class="item-counts ">
-                          3 Item
-</p> 
-                          </div>
-                        </div>
-                      </div>
-                  </div></div></div>
-        </div>
-</div>
-     
-      
-
-      <style> #shopify-section-template--24261670928668__featured_collections_5_bPpWNz .image-content__image-container {position: relative; border-radius: 10px;} </style></div>
 
       </main><!-- BEGIN sections: footer-group -->
 <div id="shopify-section-sections--24261671977244__newsletter-footer" class="shopify-section shopify-section-group-footer-group index-section"><!-- newsletter.liquid -->
@@ -5057,7 +3932,7 @@ grid-template-columns: 1fr 1fr;
   data-acc="true" >
   <div class="site-footer--head">
   <div class="container-fluid">
-    <div class="row"><div class="col-lg-3 col-md-6 " ><div class="site-footer__section text-lg-left"><h4 class="h5 site-footer__section-title">Shopping</h4><ul class="site-footer__list site-footer-block"><li class="site-footer__list-item"><a href="collections/all.html">Shop</a></li><li class="site-footer__list-item"><a href="collections/azure.html">Bestsellers</a></li><li class="site-footer__list-item"><a href="collections/all.html">Sale</a></li></ul>
+    <div class="row"><div class="col-lg-3 col-md-6 " ><div class="site-footer__section text-lg-left"><h4 class="h5 site-footer__section-title">Shopping</h4><ul class="site-footer__list site-footer-block"><li class="site-footer__list-item"><a href="collections/azure.html">Bestsellers</a></li></ul>
         </div></div><div class="col-lg-3 col-md-6 " ><div class="site-footer__section text-lg-left"><h4 class="h5 site-footer__section-title">Policies</h4><ul class="site-footer__list site-footer-block"><li class="site-footer__list-item"><a href="pages/kashique-privacy-policy.html">Privacy Policy</a></li><li class="site-footer__list-item"><a href="pages/kashique-return-exchange-policy.html">Return & Exchange Policy</a></li><li class="site-footer__list-item"><a href="pages/shipping-and-delivery-policy.html">Shipping and Delivery Policy</a></li><li class="site-footer__list-item"><a href="pages/terms-of-service.html">Terms of Service</a></li></ul>
         </div></div><div class="col-lg-3 col-md-6 " ><div class="site-footer__section text-lg-left"><h4 class="h5 site-footer__section-title">Know About Us</h4><ul class="site-footer__list site-footer-block"><li class="site-footer__list-item"><a href="pages/about-us.html">About Us</a></li><li class="site-footer__list-item"><a href="pages/contact.html">Contact</a></li></ul>
         </div></div><div class="col-lg-3 col-md-6 " ><div class="site-footer__section text-lg-left "><div class=" footer-left"><div class="rte-setting"><span><b>CONTACT US</b></span>
@@ -5254,64 +4129,7 @@ Email: support@saajia.in</div>
     <ul class="drawer__nav menu-mobile-footer-content"><li class="drawer__nav-item">
             <a href="index.html" class="drawer__nav-link drawer__nav-link--top-level"  aria-current="page">Home</a>
           </li><li class="drawer__nav-item">
-            <a href="collections/all.html" class="drawer__nav-link drawer__nav-link--top-level" >New Arrival</a>
-          </li><li class="drawer__nav-item">
-            <div class="drawer__nav-has-sublist">
-              <a href="#" class="drawer__nav-link drawer__nav-link--top-level drawer__nav-link--split" id="DrawerLabel-shop" >Shop</a>
-              <button data-toggle="collapse" data-target="#DrawerLinklist-shop" for="DrawerLinklist-shop" type="button" aria-controls="DrawerLinklist-shop" class="text-link drawer__nav-toggle-btn collapsed" aria-label="Shop" aria-expanded="true">
-                <span class="drawer__nav-toggle--open"><i class="icon-plus"></i></span>
-                <span class="drawer__nav-toggle--close"><i class="icon-minus"></i></span>
-              </button>
-            </div>
-            <div class="collapse meganav meganav--drawer" id="DrawerLinklist-shop" aria-labelledby="DrawerLabel-shop" role="navigation">
-              <ul class="meganav__nav"><!-- drawer-nav.liquid -->
-<div class="grid grid--no-gutters meganav__scroller meganav__scroller--has-list">
-  <div class="grid__item meganav__list"><li class="drawer__nav-item"><a href="collections/co-ord-set.html" 
-         class="drawer__nav-link meganav__link"
-         
-         >Co-Ord Set</a></li><li class="drawer__nav-item"><a href="collections/dress.html" 
-         class="drawer__nav-link meganav__link"
-         
-         >Dresses</a></li><li class="drawer__nav-item"><div class="drawer__nav-has-sublist">
-        <a href="collections/top.html" 
-           class="meganav__link drawer__nav-link drawer__nav-link--split" 
-           id="DrawerLabel-tops"
-           
-           >Tops</a>
-        <button data-toggle="collapse" data-target="#DrawerLinklist-tops" type="button" aria-controls="DrawerLinklist-tops" class="text-link drawer__nav-toggle-btn drawer__nav-toggle-btn--small collapsed" aria-label="Shop Menu" aria-expanded="false">
-          <span class="drawer__nav-toggle--open"><i class="icon-plus"></i></span>
-          <span class="drawer__nav-toggle--close"><i class="icon-minus"></i></span>
-        </button>
-      </div>
-
-      <div class="collapse meganav meganav--drawer" id="DrawerLinklist-tops" aria-labelledby="DrawerLabel-tops" role="navigation">
-        <ul class="meganav__nav meganav__nav--third-level"><li>
-            <a href="collections/shirt.html" class="meganav__link">Shirts</a>
-          </li></ul>
-      </div></li><li class="drawer__nav-item"><div class="drawer__nav-has-sublist">
-        <a href="collections/trousers.html" 
-           class="meganav__link drawer__nav-link drawer__nav-link--split" 
-           id="DrawerLabel-bottoms"
-           
-           >Bottoms</a>
-        <button data-toggle="collapse" data-target="#DrawerLinklist-bottoms" type="button" aria-controls="DrawerLinklist-bottoms" class="text-link drawer__nav-toggle-btn drawer__nav-toggle-btn--small collapsed" aria-label="Shop Menu" aria-expanded="false">
-          <span class="drawer__nav-toggle--open"><i class="icon-plus"></i></span>
-          <span class="drawer__nav-toggle--close"><i class="icon-minus"></i></span>
-        </button>
-      </div>
-
-      <div class="collapse meganav meganav--drawer" id="DrawerLinklist-bottoms" aria-labelledby="DrawerLabel-bottoms" role="navigation">
-        <ul class="meganav__nav meganav__nav--third-level"><li>
-            <a href="collections/trousers.html" class="meganav__link">Trousers</a>
-          </li><li>
-            <a href="collections/skirt.html" class="meganav__link">Skirts</a>
-          </li></ul>
-      </div></li></div>
-</div>
-</ul>
-            </div>
-          </li><li class="drawer__nav-item">
-            <a href="collections.html" class="drawer__nav-link drawer__nav-link--top-level" >Collections</a>
+            <a href="#shopify-section-template--24261670928668__product_list_swiper_rgAwrb" class="drawer__nav-link drawer__nav-link--top-level" >New Arrival</a>
           </li><li class="drawer__nav-item">
             <a href="pages/contact.html" class="drawer__nav-link drawer__nav-link--top-level" >Contact Us</a>
           </li><li class="drawer__nav-item">
@@ -5349,28 +4167,6 @@ Email: support@saajia.in</div>
               <a href="https://shopify.com/92796715292/account?locale=en&amp;region_country=IN" class="drawer__nav-link drawer__nav-link--top-level font-weight-normal pl-1 letter-spacing-0 d-flex align-items-center">
                 Register
               </a>
-            </li><li class="drawer__nav-item drawer-nav__item--secondary py-3 pl-2 d-flex"><span class="pr-4">
-             <noscript><form method="post" action="https://kashique.in/localization" id="FooterCountryFormNoScript" accept-charset="UTF-8" class="localization-form mr-3" enctype="multipart/form-data"><input type="hidden" name="form_type" value="localization" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" name="_method" value="put" /><input type="hidden" name="return_to" value="/?fbclid=PAZXh0bgNhZW0CMTEAAacNUWrTwU5RjEO5Fe_8pd_Yl3tL8YeHaKyr9a81qqer7LTvSCqTyBz74atz1Q_aem_CIcAvpZ_n3nZctzoEQ461A" /><div class="localization-form__select">
-    <select class="localization-selector link" name="country_code" aria-labelledby="FooterCountryLabelNoScript"><option value="IN" selected>
-            India (INR ₹)
-        </option></select>
-    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
-</svg>
-
-    </div>
-    <button class="button button--tertiary">Update country/region</button></form></noscript>
-<localization-form><form method="post" action="https://kashique.in/localization" id="HeaderCountryFormMobile" accept-charset="UTF-8" class="localization-form mr-3" enctype="multipart/form-data"><input type="hidden" name="form_type" value="localization" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" name="_method" value="put" /><input type="hidden" name="return_to" value="/?fbclid=PAZXh0bgNhZW0CMTEAAacNUWrTwU5RjEO5Fe_8pd_Yl3tL8YeHaKyr9a81qqer7LTvSCqTyBz74atz1Q_aem_CIcAvpZ_n3nZctzoEQ461A" /><div class="no-js-hidden">
-    <div class="disclosure">
-        <button type="button" class="disclosure__button localization-form__select localization-selector d-flex align-items-center" aria-expanded="false" aria-controls="FooterCountryList" aria-describedby="FooterCountryLabel">INR ₹
-<svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
-</svg>
-
-        </button>
-        <div class="disclosure__list-wrapper header-left" hidden>
-        <ul id="" role="list" class="disclosure__list list-unstyled  disable_name "><li class="disclosure__item" tabindex="-1">
-                <a class="disclosure__link caption-large link disclosure__link--active focus-inset" href="#" aria-current="true" data-value="IN"><span class="localization-form__currency"> INR ₹</span></a>
             </li></ul>
         </div>
     </div>
@@ -5708,154 +4504,166 @@ console.log("tets");
     // URL from Google Sheets "Publish to web" (as CSV)
     const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRPzuepFBSY02kJk7iycuxLwq_w9_yekodZ09tvGwqJTHdA0eQw61_hJ2FstEROBuXkAvGQr87MVQqh/pub?gid=0&single=true&output=csv';
 
-    // The container where we will add the products
-    // const productContainer = document.getElementById('product-grid-container');
-
     // Function to fetch and display products
     async function loadProducts() {
-        // if (!productContainer) {
-        //     console.error('Product container not found!');
-        //     return;
-        // }
+        // Get references to all product containers
+        const dressesContainer = document.getElementById("newDresses");
+        const topsContainer = document.getElementById("newTops");
+        const newArrivalsSwiperWrapper = document.getElementById("newArrivals-swiper-wrapper"); // <-- Targeting the new ID
 
         try {
             const response = await fetch(sheetUrl);
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
+            if (!response.ok) throw new Error('Network response was not ok');
+            
             const csvText = await response.text();
-            
-            // Parse the CSV data
             const products = parseCSV(csvText);
-
-            // ================================================================
-            // ADDED LINE: This will print the structured product data to the console.
             console.log('Fetched and Parsed Products:', products);
-            // ================================================================
 
-            document.getElementById("dress1-name").innerHTML = products[0]['ProductName'];
-            if(products[0]['DiscountPercentage']>0){
-              document.getElementById("dress1-price").innerHTML = "₹<del>"+products[0]['Price']+"</del>&nbsp; "+"₹"+Math.floor(products[0]['Price']-((products[0]['Price']/100)*products[0]['DiscountPercentage']));
-            }
-            else{
-              document.getElementById("dress1-price").innerHTML = "₹"+products[0]['Price'];
-            }
+            // Clear any existing dynamic content from category containers
+            if (dressesContainer) dressesContainer.innerHTML = ''; 
+            if (topsContainer) topsContainer.innerHTML = ''; 
             
-            document.getElementById("dress2-name").innerHTML = products[1]['ProductName'];
-            if(products[1]['DiscountPercentage'] > 0){
-              document.getElementById("dress2-price").innerHTML = "₹<del>" + products[1]['Price'] + "</del>&nbsp; " + "₹" + Math.floor(products[1]['Price'] - ((products[1]['Price'] / 100) * products[1]['DiscountPercentage']));
-            }
-            else{
-              document.getElementById("dress2-price").innerHTML = "₹" + products[1]['Price'];
-            }
-
-            document.getElementById("dress3-name").innerHTML = products[2]['ProductName'];
-            if(products[2]['DiscountPercentage'] > 0){
-              document.getElementById("dress3-price").innerHTML = "₹<del>" + products[2]['Price'] + "</del>&nbsp; " + "₹" + Math.floor(products[2]['Price'] - ((products[2]['Price'] / 100) * products[2]['DiscountPercentage']));
-            }
-            else{
-              document.getElementById("dress3-price").innerHTML = "₹" + products[2]['Price'];
-            }
-
-            document.getElementById("dress4-name").innerHTML = products[3]['ProductName'];
-            if(products[3]['DiscountPercentage'] > 0){
-              document.getElementById("dress4-price").innerHTML = "₹<del>" + products[3]['Price'] + "</del>&nbsp; " + "₹" + Math.floor(products[3]['Price'] - ((products[3]['Price'] / 100) * products[3]['DiscountPercentage']));
-            }
-            else{
-              document.getElementById("dress4-price").innerHTML = "₹" + products[3]['Price'];
-            }
-
-            document.getElementById("top1-name").innerHTML = products[4]['ProductName'];
-            if(products[4]['DiscountPercentage'] > 0){
-              document.getElementById("top1-price").innerHTML = "₹<del>" + products[4]['Price'] + "</del>&nbsp; " + "₹" + Math.floor(products[4]['Price'] - ((products[4]['Price'] / 100) * products[4]['DiscountPercentage']));
-            }
-            else{
-              document.getElementById("top1-price").innerHTML = "₹" + products[4]['Price'];
-            }
-
-            // Clear any existing content
-            productContainer.innerHTML = ''; 
-            
-            // Generate HTML for each product
+            // Loop through each product to place it correctly
             products.forEach((product, index) => {
-                const productCard = createProductCard(product, index);
-                if (productCard) {
-                    productContainer.appendChild(productCard);
+                const category = product.Category ? product.Category.toLowerCase().trim() : '';
+                const isNew = product.isNew ? product.isNew.toLowerCase().trim() : '';
+
+                // 1. Add to "New Arrivals" swiper if applicable
+                if (isNew === 'yes' && newArrivalsSwiperWrapper) {
+                    const newArrivalCard = createNewArrivalCard(product); 
+                    if (newArrivalCard) {
+                        newArrivalsSwiperWrapper.appendChild(newArrivalCard);
+                    }
+                }
+
+                // 2. Add to the respective category container (Dresses or Tops)
+                const categoryCard = createProductCard(product, index);
+                if (categoryCard) {
+                     if (category === 'dress' && dressesContainer) {
+                        dressesContainer.appendChild(categoryCard);
+                    } else if (category === 'top' && topsContainer) {
+                        topsContainer.appendChild(categoryCard);
+                    }
                 }
             });
+            
+            // IMPORTANT: After adding slides, the swiper needs to be updated.
+            const swiperInstance = document.querySelector('#Productlist-template--24261670928668__product_list_swiper_rgAwrb').swiper;
+            if (swiperInstance) {
+                swiperInstance.update();
+            }
 
         } catch (error) {
             console.error('Error fetching or parsing sheet data:', error);
-            productContainer.innerHTML = '<p>Error loading products. Please try again later.</p>';
         }
     }
 
     // A simple function to parse CSV text into an array of objects
     function parseCSV(text) {
         const rows = text.split(/\r?\n/);
-        const headers = rows[0].split(',');
+        const headers = rows[0].split(',').map(header => header.trim());
         const data = [];
-
         for (let i = 1; i < rows.length; i++) {
             if (!rows[i]) continue;
             const values = rows[i].split(',');
             const productObject = {};
             headers.forEach((header, index) => {
-                productObject[header.trim()] = values[index] ? values[index].trim() : '';
+                productObject[header] = values[index] ? values[index].trim() : '';
             });
             data.push(productObject);
         }
         return data;
     }
 
-    // Function to create the HTML for a single product card (no changes here)
-    function createProductCard(product, index) {
-        if (!product.ProductName || !product.Price || !product.ImageMain) {
-            return null;
-        }
-        const originalPrice = parseFloat(product.Price);
-        const discountPercentage = parseFloat(product.DiscountPercentage);
-        let priceHTML = `Rs. ${originalPrice.toFixed(2)}`;
-        if (discountPercentage > 0) {
-            const discountedPrice = originalPrice * (1 - discountPercentage / 100);
-            priceHTML = `
-                <span class="text-danger">Rs. ${discountedPrice.toFixed(2)}</span>
-                <s class="text-muted ml-2">Rs. ${originalPrice.toFixed(2)}</s>
-            `;
-        }
-        const productCol = document.createElement('div');
-        productCol.className = 'col-1-5 col-md-6 col-sm-6 col-xs-6 col-6 col-item';
-        productCol.setAttribute('data-aos', 'fade');
-        productCol.setAttribute('data-aos-delay', (index + 1) * 50);
-        productCol.innerHTML = `
-            <div class="product-card js-product-card product-card--style2 text-left">
-                <div class="product-card__image-wr">
-                    <a class="product-card__image js image-content__image-wrapper auto" href="#" style="padding-top:150%;">
-                        <img src="${product.ImageMain}" alt="${product.ProductName}" class="lazyload scale-in first-image" loading="lazy">
-                        <img src="${product.Image2 || product.ImageMain}" alt="${product.ProductName}" class="lazyload transition second-image" loading="lazy">
-                    </a>
-                    ${product.isBestseller.toLowerCase() === 'yes' ? '<div class="product-label rectangular_label"><span class="product-tag product-tag--absolute text-uppercase" style="background-color: #974d38; color:#ffffff;">Bestseller</span></div>' : ''}
-                </div>
-                <div class="product-card__info">
-                    <a href="#" title="${product.ProductName}" class="d-block product-card__name text-uppercase">${product.ProductName}</a>
-                    <div class="product-card__price">${priceHTML}</div>
-                    <div class="product-form__item product-form__item--submit d-flex justify-content-end-lg flex-row align-items-center">
-                        <span class="btn btn-theme btn-sm js-grid-cart d-inline-flex align-items-center">
-                            <span class="mr-2">Add to Cart</span>
-                            <svg class="svg-cart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.94727 6.86532L6.67857 3.56785V3.47363H17.4154L20.0525 6.86532M3.94727 6.86532V18.8304C3.94727 19.7725 4.79491 20.5263 5.73674 20.5263H18.263C19.2049 20.5263 20.0525 19.7725 20.0525 18.8304V6.86532M3.94727 6.86532H20.0525M15.6259 10.257C15.6259 12.1413 14.0248 13.6487 12.047 13.6487C10.0692 13.6487 8.37385 12.1413 8.37385 10.257" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </span>
-                    </div>
+    // Creates the HTML for a single "New Arrival" product card for the swiper
+function createNewArrivalCard(product) {
+    if (!product.ProductName || !product.Price || !product.ImageMain) return null;
+    
+    let priceHTML = `Rs. ${parseFloat(product.Price).toFixed(2)}`;
+    if (product.DiscountPercentage > 0) {
+        const discountedPrice = parseFloat(product.Price) * (1 - parseFloat(product.DiscountPercentage) / 100);
+        priceHTML = `<span class="text-danger">Rs. ${discountedPrice.toFixed(2)}</span> <s class="text-muted ml-2">Rs. ${parseFloat(product.Price).toFixed(2)}</s>`;
+    }
+
+    const productItem = document.createElement('div');
+    productItem.className = 'productlist-item swiper-slide';
+    productItem.innerHTML = `
+        <div class="product-card js-product-card product-card--style2 text-left">
+            <div class="product-card__image-wr">
+                <a class="product-card__image js image-content__image-wrapper auto" href="#" style="padding-top:150%;">
+                    <img src="${product.ImageMain}" alt="${product.ProductName}" class="lazyload scale-in first-image" loading="lazy">
+                    <img src="${product.Image2 || product.ImageMain}" alt="${product.ProductName}" class="lazyload transition second-image" loading="lazy">
+                </a>
+            </div>
+            <div class="product-card__info">
+                <a href="#" title="${product.ProductName}" class="d-block product-card__name text-uppercase">${product.ProductName}</a>
+                <div class="product-card__price">${priceHTML}</div>
+                
+                <div class="product-form__item product-form__item--submit d-flex justify-content-center flex-row align-items-center">
+                    <span class="btn btn-theme btn-sm js-grid-cart d-inline-flex align-items-center"
+                          style="
+                            border-radius: 10px;
+                            background-image: linear-gradient(to right, #440A08, #320200);
+                            color: #ffffff;
+                            border: none;
+                          ">
+                        <span class="mr-2">Add to Cart</span>
+                        <svg class="svg-cart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.94727 6.86532L6.67857 3.56785V3.47363H17.4154L20.0525 6.86532M3.94727 6.86532V18.8304C3.94727 19.7725 4.79491 20.5263 5.73674 20.5263H18.263C19.2049 20.5263 20.0525 19.7725 20.0525 18.8304V6.86532M3.94727 6.86532H20.0525M15.6259 10.257C15.6259 12.1413 14.0248 13.6487 12.047 13.6487C10.0692 13.6487 8.37385 12.1413 8.37385 10.257" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
                 </div>
             </div>
-        `;
-        return productCol;
+        </div>`;
+    return productItem;
+}
+
+    // Creates the HTML for the category grid sections
+function createProductCard(product, index) {
+    if (!product.ProductName || !product.Price || !product.ImageMain) return null;
+
+    let priceHTML = `Rs. ${parseFloat(product.Price).toFixed(2)}`;
+    if (product.DiscountPercentage > 0) {
+        const discountedPrice = parseFloat(product.Price) * (1 - parseFloat(product.DiscountPercentage) / 100);
+        priceHTML = `<span class="text-danger">Rs. ${discountedPrice.toFixed(2)}</span> <s class="text-muted ml-2">Rs. ${parseFloat(product.Price).toFixed(2)}</s>`;
     }
+    
+    const productCol = document.createElement('div');
+    productCol.className = 'col-1-5 col-md-6 col-sm-6 col-xs-6 col-6 col-item';
+    productCol.innerHTML = `
+        <div class="product-card js-product-card product-card--style2 text-left">
+            <div class="product-card__image-wr">
+                <a class="product-card__image js image-content__image-wrapper auto" href="#" style="padding-top:150%;">
+                    <img src="${product.ImageMain}" alt="${product.ProductName}" class="lazyload scale-in first-image" loading="lazy">
+                    <img src="${product.Image2 || product.ImageMain}" alt="${product.ProductName}" class="lazyload transition second-image" loading="lazy">
+                </a>
+                ${product.isBestseller && product.isBestseller.toLowerCase() === 'yes' ? '<div class="product-label rectangular_label"><span class="product-tag product-tag--absolute text-uppercase" style="background-color: #974d38; color:#ffffff;">Bestseller</span></div>' : ''}
+            </div>
+            <div class="product-card__info">
+                <a href="#" title="${product.ProductName}" class="d-block product-card__name text-uppercase">${product.ProductName}</a>
+                <div class="product-card__price">${priceHTML}</div>
+                <div class="product-form__item product-form__item--submit d-flex justify-content-center flex-row align-items-center">
+                    <span class="btn btn-theme btn-sm js-grid-cart d-inline-flex align-items-center"
+                          style="
+                            border-radius: 10px;
+                            background-image: linear-gradient(to right, #440A08, #320200);
+                            color: #ffffff; /* This line makes the icon visible */
+                            border: none;
+                          ">
+                        <span class="mr-2">Add to Cart</span>
+                        <svg class="svg-cart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.94727 6.86532L6.67857 3.56785V3.47363H17.4154L20.0525 6.86532M3.94727 6.86532V18.8304C3.94727 19.7725 4.79491 20.5263 5.73674 20.5263H18.263C19.2049 20.5263 20.0525 19.7725 20.0525 18.8304V6.86532M3.94727 6.86532H20.0525M15.6259 10.257C15.6259 12.1413 14.0248 13.6487 12.047 13.6487C10.0692 13.6487 8.37385 12.1413 8.37385 10.257" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+    `;
+    return productCol;
+}
 
     // Run the function when the page loads
     document.addEventListener('DOMContentLoaded', loadProducts);
 </script>
+
 
 </body>
 
