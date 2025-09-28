@@ -648,6 +648,53 @@ Shopify.routes.root = "index.html";</script>
   }
 </style>
 
+<style>
+  /* Main container to position the icons */
+.fixed-social-icons {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: row; /* This is the key change for side-by-side */
+  gap: 15px;         /* Creates space between the horizontal icons */
+  z-index: 1000;
+}
+
+/* Styling for each icon link */
+.social-link {
+  /* Flexbox properties to perfectly center the icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-link:hover {
+  transform: scale(1.1);
+}
+
+/* Specific background colors */
+.whatsapp {
+  background-color: #25D366;
+}
+
+.instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+/* Sizing the SVG icon inside the link */
+.social-link svg {
+  width: 28px;
+  height: 28px;
+}
+</style>
+
 </head>
   <body class="template-index body-theme ">
    
@@ -2519,7 +2566,7 @@ Shopify.routes.root = "index.html";</script>
     
     <div id="mobileLogo" class="d-block d-lg-none">
         <a href="index.html">
-            <img src="images/mobileLogo.jpeg?v=1747981832&amp;width=150" alt="Saajia Logo" style="width: 90px; border-radius: 50px;">
+            <img src="cdn/shop/files/logo.jpeg?v=1747981832&amp;width=150" alt="Saajia Logo" style="width: 60px; border-radius: 50px;">
         </a>
     </div>
 
@@ -2848,7 +2895,8 @@ Shopify.routes.root = "index.html";</script>
       </div>
     </div>
   </div>
-</div><style> @media (min-width: 567px) {#shopify-section-sections--24261672010012__header .site-header--sticky.active {box-shadow: 0 0px 0px 1px rgb(0 0 0 / 10%); background: transparent; transition: all ease 0.3s; }} </style></div><div id="shopify-section-sections--24261672010012__store-messages" class="shopify-section shopify-section-group-header-group"></div>
+</div><style> @media (min-width: 567px) {#shopify-section-sections--24261672010012__header .site-header--sticky.active {box-shadow: 0 0px 0px 1px rgb(0 0 0 / 10%); background: transparent; transition: all ease 0.3s; }} </style></div>
+<div id="shopify-section-sections--24261672010012__store-messages" class="shopify-section shopify-section-group-header-group"></div>
 <!-- END sections: header-group --><div class="page-container page-element is-moved-by-drawer">
 <main class="main-content" id="MainContent" role="main">
 
@@ -3320,10 +3368,15 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
   #mobile1 {
     /* Pushes the "SAAJIA'S COLLECTION" text down, which also pushes the text below it. */
     padding-top: 200px; 
+    display: none;
+  }
+
+  #mobile2 {
+    display: none;
   }
 
   #mobileButton {
-    margin-top: -150px;
+    margin-top: -50px;
   }
 }
 
@@ -3339,10 +3392,24 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
          data-slide-nav-a11y="Load slide [slide_number]"
          data-transit="slide-fade"><div class="slide  slideshow__slide slideshow__slide--108726f6-4aa5-4791-b3da-44f38358c9b2"  style="background-color: #968574;"><div class="  slideshow__image box ratio-container">
 <div class="only-desktop">
-  <img src="images/lehnga1.png" alt="" srcset="images/lehnga1.png?v=1751007060&amp;width=375 375w, images/lehnga1.png?v=1751007060&amp;width=550 550w, images/lehnga1.png?v=1751007060&amp;width=750 750w, images/lehnga1.png?v=1751007060&amp;width=1100 1100w, images/lehnga1.png?v=1751007060&amp;width=1500 1500w, images/lehnga1.png?v=1751007060&amp;width=1780 1780w, images/lehnga1.png?v=1751007060&amp;width=2000 2000w, images/lehnga1.png?v=1751007060&amp;width=3000 3000w, images/lehnga1.png?v=1751007060&amp;width=3840 3840w" width="1350" height="788" loading="eager" sizes="100vw" fetchpriority="high" class="lazyload scale-in desktop" style="object-position:center top">
+  <video autoplay muted loop playsinline style="position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;">
+      <source src="videos/main.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  <!-- <img src="images/lehnga1.png" alt="" srcset="images/lehnga1.png?v=1751007060&amp;width=375 375w, images/lehnga1.png?v=1751007060&amp;width=550 550w, images/lehnga1.png?v=1751007060&amp;width=750 750w, images/lehnga1.png?v=1751007060&amp;width=1100 1100w, images/lehnga1.png?v=1751007060&amp;width=1500 1500w, images/lehnga1.png?v=1751007060&amp;width=1780 1780w, images/lehnga1.png?v=1751007060&amp;width=2000 2000w, images/lehnga1.png?v=1751007060&amp;width=3000 3000w, images/lehnga1.png?v=1751007060&amp;width=3840 3840w" width="1350" height="788" loading="eager" sizes="100vw" fetchpriority="high" class="lazyload scale-in desktop" style="object-position:center top"> -->
 </div><div class="only-mobile">
-    <img src="images/lehnga1.png" alt="" srcset="images/lehnga1.png?v=1751007060&amp;width=375 375w, images/lehnga1.png?v=1751007060&amp;width=550 550w, images/lehnga1.png?v=1751007060&amp;width=750 750w, images/lehnga1.png?v=1751007060&amp;width=1100 1100w, images/lehnga1.png?v=1751007060&amp;width=1500 1500w, images/lehnga1.png?v=1751007060&amp;width=1780 1780w, images/lehnga1.png?v=1751007060&amp;width=2000 2000w, images/lehnga1.png?v=1751007060&amp;width=3000 3000w, images/lehnga1.png?v=1751007060&amp;width=3840 3840w" width="1350" height="788" loading="eager" sizes="100vw" fetchpriority="high" class="lazyload scale-in desktop" style="object-position:center top">
-</div></div>
+    <!-- <img src="images/lehnga1.png" alt="" srcset="images/lehnga1.png?v=1751007060&amp;width=375 375w, images/lehnga1.png?v=1751007060&amp;width=550 550w, images/lehnga1.png?v=1751007060&amp;width=750 750w, images/lehnga1.png?v=1751007060&amp;width=1100 1100w, images/lehnga1.png?v=1751007060&amp;width=1500 1500w, images/lehnga1.png?v=1751007060&amp;width=1780 1780w, images/lehnga1.png?v=1751007060&amp;width=2000 2000w, images/lehnga1.png?v=1751007060&amp;width=3000 3000w, images/lehnga1.png?v=1751007060&amp;width=3840 3840w" width="1350" height="788" loading="eager" sizes="100vw" fetchpriority="high" class="lazyload scale-in desktop" style="object-position:center top"> -->
+    <video autoplay muted loop playsinline>
+      <source src="videos/main.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div></div>
         
         
         
@@ -3437,7 +3504,7 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
             <div class="section-block">
                 <div class="container-fluid">
                     <h3 class="section-title-1 text-center mb-5" data-aos="" data-aos-duration="500">
-                        <span>New Arrivals</span>
+                        <span style="color: #440A08; font-size: 25px;">New Arrivals</span>
                     </h3>
                 </div>
                 <div class="container-fluid container-p">
@@ -3446,7 +3513,7 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
                             
                             <div class="swiper-wrapper" id="newArrivals-swiper-wrapper">
 
-                                <div class="productlist-banner swiper-slide h-100">
+                                <!-- <div class="productlist-banner swiper-slide h-100">
                                     <div class="image-content__image-container h-100 overflow-hidden">
                                         <div class="image-content__image-wrapper h-100">
                                             <img class="image-content__image lazyload scale-in" src="images/5/1.jpg?v=1750408626&amp;width=720" alt="" loading="lazy">
@@ -3457,7 +3524,7 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 
                                 </div>
                             <div class="swiper-scrollbar"></div>
@@ -3485,7 +3552,7 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
       }
     }</style><div class="container-fluid">
     <div class="section-block"><!-- section-heading.liquid - Apply for all section title --><h3 class="section-title-1 text-left   mb-5 " data-aos="fade" data-aos-duration="500">
-    <div style="display: flex; justify-content: center;"><span>New Dress Collection</span></div>
+    <div style="display: flex; justify-content: center;"><span style="color: #440A08;">New Dress Collection</span></div>
   </h3><div class="row  " data-aos="fade" id="newDresses">
     
     </div>
@@ -3510,7 +3577,7 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
       }
     }</style><div class="container-fluid">
     <div class="section-block"><!-- section-heading.liquid - Apply for all section title --><h3 class="section-title-1 text-left   mb-5 " data-aos="fade" data-aos-duration="500">
-    <div style="display: flex; justify-content: center;"><span>New Tops Collection</span></div>
+    <div style="display: flex; justify-content: center;"><span style="color: #440A08;">New Tops Collection</span></div>
   </h3><div class="row  " data-aos="fade" id="newTops">
     
     </div>
@@ -3524,10 +3591,11 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
 
 <section id="shopify-section-template--24261670928668__video_with_text_GpFQDf" class="shopify-section shopify-section"><section class="video-text-section container-fluid">
   <div class="video-side">
-    <video autoplay muted loop playsinline>
+    <img src="images/lehnga1.png" alt="">
+    <!-- <video autoplay muted loop playsinline>
       <source src="videos/main.mp4" type="video/mp4">
       Your browser does not support the video tag.
-    </video>
+    </video> -->
   </div>
   <div class="text-side">
     <h2>Timeless Silhouettes, Consciously Crafted.</h2>
@@ -3932,10 +4000,10 @@ width:50%;
   data-acc="true" >
   <div class="site-footer--head">
   <div class="container-fluid">
-    <div class="row"><div class="col-lg-3 col-md-6 " ><div class="site-footer__section text-lg-left"><h4 class="h5 site-footer__section-title">Shopping</h4><ul class="site-footer__list site-footer-block"><li class="site-footer__list-item"><a href="collections/azure.html">Bestsellers</a></li></ul>
-        </div></div><div class="col-lg-3 col-md-6 " ><div class="site-footer__section text-lg-left"><h4 class="h5 site-footer__section-title">Policies</h4><ul class="site-footer__list site-footer-block"><li class="site-footer__list-item"><a href="pages/kashique-privacy-policy.html">Privacy Policy</a></li><li class="site-footer__list-item"><a href="pages/kashique-return-exchange-policy.html">Return & Exchange Policy</a></li><li class="site-footer__list-item"><a href="pages/shipping-and-delivery-policy.html">Shipping and Delivery Policy</a></li><li class="site-footer__list-item"><a href="pages/terms-of-service.html">Terms of Service</a></li></ul>
-        </div></div><div class="col-lg-3 col-md-6 " ><div class="site-footer__section text-lg-left"><h4 class="h5 site-footer__section-title">Know About Us</h4><ul class="site-footer__list site-footer-block"><li class="site-footer__list-item"><a href="pages/about-us.html">About Us</a></li><li class="site-footer__list-item"><a href="pages/contact.html">Contact</a></li></ul>
-        </div></div><div class="col-lg-3 col-md-6 " ><div class="site-footer__section text-lg-left "><div class=" footer-left"><div class="rte-setting"><span><b>CONTACT US</b></span>
+    <div class="row"><div class="col-lg-3 col-md-6 " ><div class="site-footer__section text-lg-left"><h4 class="h5 site-footer__section-title" style="color: #440A08;">Shopping</h4><ul class="site-footer__list site-footer-block"><li class="site-footer__list-item"><a href="#shopify-section-template--24261670928668__featured_products_64iAG7">New Dress Collection</a></li><li class="site-footer__list-item"><a href="#shopify-section-template--24261670928668__featured_products_64iAG7">New Top Collection</a></li></ul>
+        </div></div><div class="col-lg-3 col-md-6 " ><div class="site-footer__section text-lg-left"><h4 class="h5 site-footer__section-title" style="color: #440A08;">Policies</h4><ul class="site-footer__list site-footer-block"><li class="site-footer__list-item"><a href="pages/kashique-privacy-policy.html">Privacy Policy</a></li><li class="site-footer__list-item"><a href="pages/kashique-return-exchange-policy.html">Return & Exchange Policy</a></li><li class="site-footer__list-item"><a href="pages/shipping-and-delivery-policy.html">Shipping and Delivery Policy</a></li><li class="site-footer__list-item"><a href="pages/terms-of-service.html">Terms of Service</a></li></ul>
+        </div></div><div class="col-lg-3 col-md-6 " ><div class="site-footer__section text-lg-left"><h4 class="h5 site-footer__section-title" style="color: #440A08;">Know About Us</h4><ul class="site-footer__list site-footer-block"><li class="site-footer__list-item"><a href="pages/about-us.html">About Us</a></li><li class="site-footer__list-item"><a href="pages/contact.html">Contact</a></li></ul>
+        </div></div><div class="col-lg-3 col-md-6 " ><div class="site-footer__section text-lg-left "><div class=" footer-left"><div class="rte-setting"><span style="color: #440A08;"><b>CONTACT US</b></span>
 <br><br>
 Customer Support-WhatsApp: 85958 62203
 <br><br>
@@ -4113,14 +4181,19 @@ Email: support@saajia.in</div>
     fill: none;
   }
 </style>
-<div class="progress-wrap">
-  <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-    <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
-  </svg>
-  <span class="icon-arrow">
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m17.1 18.9 5.9-6.4L17.1 6m5.9 6.4H0" stroke="currentColor" stroke-width="2"></path></svg>
-  </span>
+
+
+<div class="fixed-social-icons">
+  <a href="https://wa.me/+918595862203" target="_blank" class="social-link whatsapp">
+    <img src="images/socials/whatsapp.png" alt="WhatsApp" style="border-radius: 10px;">
+  </a>
+
+  <a href="https://instagram.com/saajia_official" target="_blank" class="social-link instagram">
+    <img src="images/socials/instagram.png" alt="Instagram" style="border-radius: 10px;">
+  </a>
 </div>
+
+
 <div id="NavDrawer" class="drawer drawer--left">
   <div class="drawer__inner">
     <div class="modal-header js-drawer-close py-4">
@@ -4173,7 +4246,7 @@ Email: support@saajia.in</div>
     <input type="hidden" name="country_code" value="IN">
     </div></form></localization-form>
           </span>
-<noscript><form method="post" action="https://kashique.in/localization" id="FooterLanguageFormNoScript" accept-charset="UTF-8" class="localization-form" enctype="multipart/form-data"><input type="hidden" name="form_type" value="localization" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" name="_method" value="put" /><input type="hidden" name="return_to" value="/?fbclid=PAZXh0bgNhZW0CMTEAAacNUWrTwU5RjEO5Fe_8pd_Yl3tL8YeHaKyr9a81qqer7LTvSCqTyBz74atz1Q_aem_CIcAvpZ_n3nZctzoEQ461A" /><div class="localization-form__select"><select class="localization-selector link" name="locale_code" aria-labelledby="FooterLanguageLabelNoScript"><option value="en" lang="en" selected>
+<!-- <noscript><form method="post" action="https://kashique.in/localization" id="FooterLanguageFormNoScript" accept-charset="UTF-8" class="localization-form" enctype="multipart/form-data"><input type="hidden" name="form_type" value="localization" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" name="_method" value="put" /><input type="hidden" name="return_to" value="/?fbclid=PAZXh0bgNhZW0CMTEAAacNUWrTwU5RjEO5Fe_8pd_Yl3tL8YeHaKyr9a81qqer7LTvSCqTyBz74atz1Q_aem_CIcAvpZ_n3nZctzoEQ461A" /><div class="localization-form__select"><select class="localization-selector link" name="locale_code" aria-labelledby="FooterLanguageLabelNoScript"><option value="en" lang="en" selected>
             English
           </option></select>
       <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
@@ -4181,9 +4254,9 @@ Email: support@saajia.in</div>
 </svg>
 
     </div>
-    <button class="button button--tertiary">Update language</button></form></noscript>
+    <button class="button button--tertiary">Update language</button></form></noscript> -->
 
-<localization-form><form method="post" action="https://kashique.in/localization" id="HeaderLanguageFormMobile" accept-charset="UTF-8" class="localization-form mr-lg-3" enctype="multipart/form-data"><input type="hidden" name="form_type" value="localization" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" name="_method" value="put" /><input type="hidden" name="return_to" value="/?fbclid=PAZXh0bgNhZW0CMTEAAacNUWrTwU5RjEO5Fe_8pd_Yl3tL8YeHaKyr9a81qqer7LTvSCqTyBz74atz1Q_aem_CIcAvpZ_n3nZctzoEQ461A" /><div class="no-js-hidden"><div class="disclosure">
+<!-- <localization-form><form method="post" action="https://kashique.in/localization" id="HeaderLanguageFormMobile" accept-charset="UTF-8" class="localization-form mr-lg-3" enctype="multipart/form-data"><input type="hidden" name="form_type" value="localization" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" name="_method" value="put" /><input type="hidden" name="return_to" value="/?fbclid=PAZXh0bgNhZW0CMTEAAacNUWrTwU5RjEO5Fe_8pd_Yl3tL8YeHaKyr9a81qqer7LTvSCqTyBz74atz1Q_aem_CIcAvpZ_n3nZctzoEQ461A" /><div class="no-js-hidden"><div class="disclosure">
         <button type="button" class="disclosure__button localization-form__select localization-selector  link--text caption-large" aria-expanded="false" aria-controls="" aria-describedby="FooterLanguageLabel">
           English
           <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
@@ -4200,7 +4273,7 @@ Email: support@saajia.in</div>
         </div>
       </div>
       <input type="hidden" name="locale_code" value="en">
-    </div></form></localization-form>
+    </div></form></localization-form> -->
 </li>
     </ul>
   </div>
@@ -4502,83 +4575,117 @@ console.log("tets");
 
 <script>
     // URL from Google Sheets "Publish to web" (as CSV)
-    const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRPzuepFBSY02kJk7iycuxLwq_w9_yekodZ09tvGwqJTHdA0eQw61_hJ2FstEROBuXkAvGQr87MVQqh/pub?gid=0&single=true&output=csv';
+    /**
+ * =================================================================================
+ * Product Loader and Link Generator for Shopify Theme
+ * =================================================================================
+ * This script fetches product data from a Google Sheet, parses it, and dynamically
+ * populates multiple sections of a webpage, including a "New Arrivals" swiper and
+ * category-specific grids.
+ *
+ * Key Feature: It constructs a unique URL for each product, linking to a detailed
+ * product page and passing the product's unique ID as a URL parameter.
+ * Example Link: collections/azure/products/azure-co-ord-set.html?productID=dress001
+ *
+ * This ensures that product listings on the main page correctly link to their
+ * respective detail pages.
+ */
 
-    // Function to fetch and display products
-    async function loadProducts() {
-        // Get references to all product containers
-        const dressesContainer = document.getElementById("newDresses");
-        const topsContainer = document.getElementById("newTops");
-        const newArrivalsSwiperWrapper = document.getElementById("newArrivals-swiper-wrapper"); // <-- Targeting the new ID
+// URL from Google Sheets "Publish to web" (as CSV)
+const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRPzuepFBSY02kJk7iycuxLwq_w9_yekodZ09tvGwqJTHdA0eQw61_hJ2FstEROBuXkAvGQr87MVQqh/pub?gid=0&single=true&output=csv';
 
-        try {
-            const response = await fetch(sheetUrl);
-            if (!response.ok) throw new Error('Network response was not ok');
-            
-            const csvText = await response.text();
-            const products = parseCSV(csvText);
-            console.log('Fetched and Parsed Products:', products);
+/**
+ * Main function to fetch, parse, and display products on the page.
+ */
+async function loadProducts() {
+    // Get references to all product containers from the HTML
+    const dressesContainer = document.getElementById("newDresses");
+    const topsContainer = document.getElementById("newTops");
+    const newArrivalsSwiperWrapper = document.getElementById("newArrivals-swiper-wrapper");
 
-            // Clear any existing dynamic content from category containers
-            if (dressesContainer) dressesContainer.innerHTML = ''; 
-            if (topsContainer) topsContainer.innerHTML = ''; 
-            
-            // Loop through each product to place it correctly
-            products.forEach((product, index) => {
-                const category = product.Category ? product.Category.toLowerCase().trim() : '';
-                const isNew = product.isNew ? product.isNew.toLowerCase().trim() : '';
+    try {
+        const response = await fetch(sheetUrl);
+        if (!response.ok) throw new Error('Network response was not ok');
+        
+        const csvText = await response.text();
+        const products = parseCSV(csvText);
+        console.log('Fetched and Parsed Products:', products);
 
-                // 1. Add to "New Arrivals" swiper if applicable
-                if (isNew === 'yes' && newArrivalsSwiperWrapper) {
-                    const newArrivalCard = createNewArrivalCard(product); 
-                    if (newArrivalCard) {
-                        newArrivalsSwiperWrapper.appendChild(newArrivalCard);
-                    }
+        // Clear any existing dynamic content to prevent duplication
+        if (dressesContainer) dressesContainer.innerHTML = ''; 
+        if (topsContainer) topsContainer.innerHTML = ''; 
+        if (newArrivalsSwiperWrapper) newArrivalsSwiperWrapper.innerHTML = '';
+
+        // Loop through each product to place it correctly
+        products.forEach((product, index) => {
+            const category = product.Category ? product.Category.toLowerCase().trim() : '';
+            const isNew = product.isNew ? product.isNew.toLowerCase().trim() : '';
+
+            // 1. Add to "New Arrivals" swiper if applicable
+            if (isNew === 'yes' && newArrivalsSwiperWrapper) {
+                const newArrivalCard = createNewArrivalCard(product); 
+                if (newArrivalCard) {
+                    newArrivalsSwiperWrapper.appendChild(newArrivalCard);
                 }
-
-                // 2. Add to the respective category container (Dresses or Tops)
-                const categoryCard = createProductCard(product, index);
-                if (categoryCard) {
-                     if (category === 'dress' && dressesContainer) {
-                        dressesContainer.appendChild(categoryCard);
-                    } else if (category === 'top' && topsContainer) {
-                        topsContainer.appendChild(categoryCard);
-                    }
-                }
-            });
-            
-            // IMPORTANT: After adding slides, the swiper needs to be updated.
-            const swiperInstance = document.querySelector('#Productlist-template--24261670928668__product_list_swiper_rgAwrb').swiper;
-            if (swiperInstance) {
-                swiperInstance.update();
             }
 
-        } catch (error) {
-            console.error('Error fetching or parsing sheet data:', error);
+            // 2. Add to the respective category container (Dresses or Tops)
+            const categoryCard = createProductCard(product, index);
+            if (categoryCard) {
+                 if (category === 'dress' && dressesContainer) {
+                    dressesContainer.appendChild(categoryCard);
+                } else if (category === 'top' && topsContainer) {
+                    topsContainer.appendChild(categoryCard);
+                }
+            }
+        });
+        
+        // After adding slides, the swiper needs to be updated to recognize them.
+        const swiperInstance = document.querySelector('#Productlist-template--24261670928668__product_list_swiper_rgAwrb').swiper;
+        if (swiperInstance) {
+            swiperInstance.update();
         }
-    }
 
-    // A simple function to parse CSV text into an array of objects
-    function parseCSV(text) {
-        const rows = text.split(/\r?\n/);
-        const headers = rows[0].split(',').map(header => header.trim());
-        const data = [];
-        for (let i = 1; i < rows.length; i++) {
-            if (!rows[i]) continue;
-            const values = rows[i].split(',');
-            const productObject = {};
-            headers.forEach((header, index) => {
-                productObject[header] = values[index] ? values[index].trim() : '';
-            });
-            data.push(productObject);
-        }
-        return data;
+    } catch (error) {
+        console.error('Error fetching or parsing sheet data:', error);
     }
+}
 
-    // Creates the HTML for a single "New Arrival" product card for the swiper
+/**
+ * A simple function to parse CSV text into an array of objects.
+ * @param {string} text The raw CSV text from the Google Sheet.
+ * @returns {Array<Object>} An array of product objects.
+ */
+function parseCSV(text) {
+    const rows = text.split(/\r?\n/);
+    const headers = rows[0].split(',').map(header => header.trim());
+    const data = [];
+
+    for (let i = 1; i < rows.length; i++) {
+        if (!rows[i]) continue; // Skip empty rows
+        const values = rows[i].split(',');
+        const productObject = {};
+        headers.forEach((header, index) => {
+            productObject[header] = values[index] ? values[index].trim() : '';
+        });
+        data.push(productObject);
+    }
+    return data;
+}
+
+/**
+ * Creates the HTML for a single "New Arrival" product card for the swiper.
+ * @param {Object} product The product data object from the parsed CSV.
+ * @returns {HTMLElement|null} The created div element or null if data is missing.
+ */
 function createNewArrivalCard(product) {
-    if (!product.ProductName || !product.Price || !product.ImageMain) return null;
+    // Ensure the product has the necessary data, including a productID for the link
+    if (!product.ProductName || !product.Price || !product.ImageMain || !product.productID) return null;
     
+    // --- MODIFICATION ---
+    // Create the dynamic URL that links to the product detail page.
+    const productURL = `collections/azure/products/azure-co-ord-set.html?productID=${product.productID}`;
+
     let priceHTML = `Rs. ${parseFloat(product.Price).toFixed(2)}`;
     if (product.DiscountPercentage > 0) {
         const discountedPrice = parseFloat(product.Price) * (1 - parseFloat(product.DiscountPercentage) / 100);
@@ -4587,38 +4694,43 @@ function createNewArrivalCard(product) {
 
     const productItem = document.createElement('div');
     productItem.className = 'productlist-item swiper-slide';
+    // --- MODIFICATION ---
+    // The productURL is now used in all href attributes.
+    // The button is now an <a> tag linking to the page.
     productItem.innerHTML = `
         <div class="product-card js-product-card product-card--style2 text-left">
             <div class="product-card__image-wr">
-                <a class="product-card__image js image-content__image-wrapper auto" href="#" style="padding-top:150%;">
+                <a class="product-card__image js image-content__image-wrapper auto" href="${productURL}" style="padding-top:150%;">
                     <img src="${product.ImageMain}" alt="${product.ProductName}" class="lazyload scale-in first-image" loading="lazy">
                     <img src="${product.Image2 || product.ImageMain}" alt="${product.ProductName}" class="lazyload transition second-image" loading="lazy">
                 </a>
             </div>
             <div class="product-card__info">
-                <a href="#" title="${product.ProductName}" class="d-block product-card__name text-uppercase">${product.ProductName}</a>
+                <a href="${productURL}" title="${product.ProductName}" class="d-block product-card__name text-uppercase" style="color: #440A08;">${product.ProductName}</a>
                 <div class="product-card__price">${priceHTML}</div>
-                
                 <div class="product-form__item product-form__item--submit d-flex justify-content-center flex-row align-items-center">
-                    <span class="btn btn-theme btn-sm js-grid-cart d-inline-flex align-items-center"
-                          style="
-                            border-radius: 10px;
-                            background-image: linear-gradient(to right, #440A08, #320200);
-                            color: #ffffff;
-                            border: none;
-                          ">
-                        <span class="mr-2">Add to Cart</span>
-                        <svg class="svg-cart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.94727 6.86532L6.67857 3.56785V3.47363H17.4154L20.0525 6.86532M3.94727 6.86532V18.8304C3.94727 19.7725 4.79491 20.5263 5.73674 20.5263H18.263C19.2049 20.5263 20.0525 19.7725 20.0525 18.8304V6.86532M3.94727 6.86532H20.0525M15.6259 10.257C15.6259 12.1413 14.0248 13.6487 12.047 13.6487C10.0692 13.6487 8.37385 12.1413 8.37385 10.257" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </span>
+                    <a href="${productURL}" class="btn btn-theme btn-sm js-grid-cart d-inline-flex align-items-center"
+                          style="border-radius: 10px; background-image: linear-gradient(to right, #440A08, #320200); color: #ffffff; border: none;">
+                        <span class="mr-2">View Details</span>
+                    </a>
                 </div>
             </div>
         </div>`;
     return productItem;
 }
 
-    // Creates the HTML for the category grid sections
+/**
+ * Creates the HTML for the category grid sections (e.g., Dresses, Tops).
+ * @param {Object} product The product data object.
+ * @returns {HTMLElement|null} The created div element or null if data is missing.
+ */
 function createProductCard(product, index) {
-    if (!product.ProductName || !product.Price || !product.ImageMain) return null;
+    // Ensure the product has the necessary data, including a productID for the link
+    if (!product.ProductName || !product.Price || !product.ImageMain || !product.productID) return null;
+
+    // --- MODIFICATION ---
+    // Create the dynamic URL that links to the product detail page.
+    const productURL = `collections/azure/products/azure-co-ord-set.html?productID=${product.productID}`;
 
     let priceHTML = `Rs. ${parseFloat(product.Price).toFixed(2)}`;
     if (product.DiscountPercentage > 0) {
@@ -4628,31 +4740,26 @@ function createProductCard(product, index) {
     
     const productCol = document.createElement('div');
     productCol.className = 'col-1-5 col-md-6 col-sm-6 col-xs-6 col-6 col-item';
+    // --- MODIFICATION ---
+    // The productURL is now used in all href attributes.
+    // The button is now an <a> tag linking to the page.
     productCol.innerHTML = `
         <div class="product-card js-product-card product-card--style2 text-left">
             <div class="product-card__image-wr">
-                <a class="product-card__image js image-content__image-wrapper auto" href="#" style="padding-top:150%;">
+                <a class="product-card__image js image-content__image-wrapper auto" href="${productURL}" style="padding-top:150%;">
                     <img src="${product.ImageMain}" alt="${product.ProductName}" class="lazyload scale-in first-image" loading="lazy">
                     <img src="${product.Image2 || product.ImageMain}" alt="${product.ProductName}" class="lazyload transition second-image" loading="lazy">
                 </a>
-                ${product.isBestseller && product.isBestseller.toLowerCase() === 'yes' ? '<div class="product-label rectangular_label"><span class="product-tag product-tag--absolute text-uppercase" style="background-color: #974d38; color:#ffffff;">Bestseller</span></div>' : ''}
+                ${product.isBestseller && product.isBestseller.toLowerCase() === 'yes' ? '<div class="product-label rectangular_label"><span class="product-tag product-tag--absolute text-uppercase" style="background-image: linear-gradient(to right, #440A08, #320000); color: #ffffff;">Bestseller</span></div>' : ''}
             </div>
             <div class="product-card__info">
-                <a href="#" title="${product.ProductName}" class="d-block product-card__name text-uppercase">${product.ProductName}</a>
+                <a href="${productURL}" title="${product.ProductName}" class="d-block product-card__name text-uppercase" style="color: #440A08;">${product.ProductName}</a>
                 <div class="product-card__price">${priceHTML}</div>
                 <div class="product-form__item product-form__item--submit d-flex justify-content-center flex-row align-items-center">
-                    <span class="btn btn-theme btn-sm js-grid-cart d-inline-flex align-items-center"
-                          style="
-                            border-radius: 10px;
-                            background-image: linear-gradient(to right, #440A08, #320200);
-                            color: #ffffff; /* This line makes the icon visible */
-                            border: none;
-                          ">
-                        <span class="mr-2">Add to Cart</span>
-                        <svg class="svg-cart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.94727 6.86532L6.67857 3.56785V3.47363H17.4154L20.0525 6.86532M3.94727 6.86532V18.8304C3.94727 19.7725 4.79491 20.5263 5.73674 20.5263H18.263C19.2049 20.5263 20.0525 19.7725 20.0525 18.8304V6.86532M3.94727 6.86532H20.0525M15.6259 10.257C15.6259 12.1413 14.0248 13.6487 12.047 13.6487C10.0692 13.6487 8.37385 12.1413 8.37385 10.257" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </span>
+                    <a href="${productURL}" class="btn btn-theme btn-sm js-grid-cart d-inline-flex align-items-center"
+                          style="border-radius: 10px; background-image: linear-gradient(to right, #440A08, #320000); color: #ffffff; border: none;">
+                        <span class="mr-2">View Details</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -4660,8 +4767,8 @@ function createProductCard(product, index) {
     return productCol;
 }
 
-    // Run the function when the page loads
-    document.addEventListener('DOMContentLoaded', loadProducts);
+// Run the main function when the page has finished loading
+document.addEventListener('DOMContentLoaded', loadProducts);
 </script>
 
 
