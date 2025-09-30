@@ -695,8 +695,59 @@ Shopify.routes.root = "index.html";</script>
 }
 </style>
 
+<style>
+  /* The full-screen overlay */
+#popup-overlay {
+    position: fixed; /* Sit on top of the page content */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
+    z-index: 1000; /* Make sure it's on top */
+
+    /* Use flexbox to center the popup content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The popup box */
+#popup-content {
+    background-color: #fff;
+    padding: 20px 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    color: #440A08
+}
+
+/* Style for the button */
+#close-popup-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #440A08;
+    color: white;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+</style>
+
 </head>
   <body class="template-index body-theme ">
+    <div id="popup-overlay">
+    <div id="popup-content">
+      <img src="cdn/shop/files/logo.jpeg" width="25%" alt="" style="border-radius: 50%;">
+        <h3 style="color: #440A08; padding-top: 10px;">Get 10% Off Your First Order!</h3>
+        <p>Follow us on instagram and get an exclusice 10% discount on 1st order.</p>
+        <button id="close-popup-btn">Claim discount</button>
+        <div style="padding-top: 10px;" id="c-popup-btn">
+          No Thanks!
+        </div>
+    </div>
+</div>
    
     <img  width="99998" height="99999" alt="index" style="pointer-events: none; position: absolute; top: 0; left: 0; width: 99vw; height: 99vh; max-width: 99vw; max-height: 99vh;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI5OTk5OXB4IiBoZWlnaHQ9Ijk5OTk5cHgiIHZpZXdCb3g9IjAgMCA5OTk5OSA5OTk5OSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48ZyBzdHJva2U9Im5vbmUiIGZpbGw9Im5vbmUiIGZpbGwtb3BhY2l0eT0iMCI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9Ijk5OTk5IiBoZWlnaHQ9Ijk5OTk5Ij48L3JlY3Q+IDwvZz4gPC9zdmc+"><!-- BEGIN sections: header-group -->
 <div id="shopify-section-sections--24261672010012__announcement-bar" class="shopify-section shopify-section-group-header-group header-announcement"><style>
@@ -4773,6 +4824,37 @@ function createProductCard(product, index) {
 
 // Run the main function when the page has finished loading
 document.addEventListener('DOMContentLoaded', loadProducts);
+</script>
+
+<script>
+// Wait for the page to load before running the script
+window.addEventListener('load', function() {
+
+    // Select all the necessary elements
+    const popupOverlay = document.getElementById('popup-overlay');
+    const claimButton = document.getElementById('close-popup-btn');
+    const noThanksButton = document.getElementById('c-popup-btn');
+
+    // --- Function to close the popup ---
+    function closePopup() {
+        popupOverlay.style.display = 'none';
+    }
+
+    // --- Event listener for the 'Claim discount' button ---
+    claimButton.addEventListener('click', function() {
+        // 1. Open your Instagram page in a new tab
+        window.open('https://instagram.com/saajia_official', '_blank');
+
+        // 2. Close the popup
+        closePopup();
+    });
+
+    // --- Event listener for the 'No Thanks!' button ---
+    noThanksButton.addEventListener('click', function() {
+        // Just close the popup
+        closePopup();
+    });
+});
 </script>
 
 
