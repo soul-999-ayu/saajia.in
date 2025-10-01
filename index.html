@@ -698,16 +698,19 @@ Shopify.routes.root = "index.html";</script>
 <style>
   /* The full-screen overlay */
 #popup-overlay {
-    position: fixed; /* Sit on top of the page content */
+    position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
-    z-index: 1000; /* Make sure it's on top */
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
 
-    /* Use flexbox to center the popup content */
-    display: flex;
+    /* --- THIS IS THE KEY CHANGE --- */
+    /* Hide the popup by default */
+    display: none; 
+
+    /* These rules will be applied by JS when it's shown */
     justify-content: center;
     align-items: center;
 }
@@ -4830,30 +4833,38 @@ document.addEventListener('DOMContentLoaded', loadProducts);
 // Wait for the page to load before running the script
 window.addEventListener('load', function() {
 
-    // Select all the necessary elements
-    const popupOverlay = document.getElementById('popup-overlay');
-    const claimButton = document.getElementById('close-popup-btn');
-    const noThanksButton = document.getElementById('c-popup-btn');
+    // Check if the popup has already been shown during this session
+    if (!sessionStorage.getItem('popupShown')) {
 
-    // --- Function to close the popup ---
-    function closePopup() {
-        popupOverlay.style.display = 'none';
+        // If not shown, select all the necessary elements
+        const popupOverlay = document.getElementById('popup-overlay');
+        const claimButton = document.getElementById('close-popup-btn');
+        const noThanksButton = document.getElementById('c-popup-btn');
+
+        popupOverlay.style.display = "flex";
+
+        // --- Function to close the popup ---
+        function closePopup() {
+            popupOverlay.style.display = 'none';
+            // Set a flag in sessionStorage to remember the popup has been closed
+            sessionStorage.setItem('popupShown', 'true');
+        }
+
+        // --- Event listener for the 'Claim discount' button ---
+        claimButton.addEventListener('click', function() {
+            // 1. Open your Instagram page in a new tab
+            window.open('https://instagram.com/saajia_official', '_blank');
+
+            // 2. Close the popup and set the flag
+            closePopup();
+        });
+
+        // --- Event listener for the 'No Thanks!' button ---
+        noThanksButton.addEventListener('click', function() {
+            // Just close the popup and set the flag
+            closePopup();
+        });
     }
-
-    // --- Event listener for the 'Claim discount' button ---
-    claimButton.addEventListener('click', function() {
-        // 1. Open your Instagram page in a new tab
-        window.open('https://instagram.com/saajia_official', '_blank');
-
-        // 2. Close the popup
-        closePopup();
-    });
-
-    // --- Event listener for the 'No Thanks!' button ---
-    noThanksButton.addEventListener('click', function() {
-        // Just close the popup
-        closePopup();
-    });
 });
 </script>
 
