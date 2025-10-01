@@ -4741,7 +4741,7 @@ function createNewArrivalCard(product) {
     // Create the dynamic URL that links to the product detail page.
     const productURL = `collections/azure/products/azure-co-ord-set.html?productID=${product.productID}`;
 
-    let priceHTML = `Rs. ${parseFloat(product.Price).toFixed(2)}`;
+    let priceHTML = `Rs. ${product.Price}`;
     if (product.DiscountPercentage > 0) {
         const discountedPrice = parseFloat(product.Price) * (1 - parseFloat(product.DiscountPercentage) / 100);
         priceHTML = `<span class="text-danger">Rs. ${discountedPrice.toFixed(2)}</span> <s class="text-muted ml-2">Rs. ${parseFloat(product.Price).toFixed(2)}</s>`;
@@ -4787,7 +4787,7 @@ function createProductCard(product, index) {
     // Create the dynamic URL that links to the product detail page.
     const productURL = `collections/azure/products/azure-co-ord-set.html?productID=${product.productID}`;
 
-    let priceHTML = `Rs. ${parseFloat(product.Price).toFixed(2)}`;
+    let priceHTML = `Rs. ${product.Price}`;
     if (product.DiscountPercentage > 0) {
         const discountedPrice = parseFloat(product.Price) * (1 - parseFloat(product.DiscountPercentage) / 100);
         priceHTML = `<span class="text-danger">Rs. ${discountedPrice.toFixed(2)}</span> <s class="text-muted ml-2">Rs. ${parseFloat(product.Price).toFixed(2)}</s>`;
