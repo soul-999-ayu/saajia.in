@@ -3337,7 +3337,7 @@ Shopify.routes.root = "../../../index.html";</script>
             });
          }
         function capitalizeFirstLetter(string) { /* ... (same as before) ... */ if (!string) return ''; return string.charAt(0).toUpperCase() + string.slice(1); }
-        function displayEmptyCart() { /* ... (same as before) ... */ cartContainer.innerHTML = ''; loadingState.classList.add('hidden'); emptyCartState.classList.remove('hidden'); errorState.classList.add('hidden'); orderSummaryEl.classList.add('hidden'); }
+        function displayEmptyCart() { /* ... (same as before) ... */ cartContainer.innerHTML = 'Your cart is empty!'; loadingState.classList.add('hidden'); emptyCartState.classList.remove('hidden'); errorState.classList.add('hidden'); orderSummaryEl.classList.add('hidden'); }
         function addCartItemEventListeners() { /* ... (same as before, re-attaches listeners) ... */ document.querySelectorAll('.quantity-input').forEach(input => { input.removeEventListener('change', handleQuantityChange); input.addEventListener('change', handleQuantityChange); }); document.querySelectorAll('.remove-item-btn').forEach(button => { button.removeEventListener('click', handleRemoveItem); button.addEventListener('click', handleRemoveItem); }); }
         // --- MODIFIED: Handle quantity input changes with alert for max limit ---
         function handleQuantityChange(event) {
@@ -3424,7 +3424,7 @@ Shopify.routes.root = "../../../index.html";</script>
 
             // --- Your Fixed Rate Logic based on Prefixes ---
              if (pincode.startsWith('110')) { // Delhi
-                shippingCost = 0;
+                shippingCost = 100;
                 zoneMessage = "Fixed Shipping (Delhi)";
             } else if (pincode.startsWith('12') || pincode.startsWith('13')) { // Haryana (120-139)
                 shippingCost = 45;

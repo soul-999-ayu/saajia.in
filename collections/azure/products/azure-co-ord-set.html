@@ -5377,14 +5377,14 @@ document.addEventListener('DOMContentLoaded', loadProductDetails);
         // Wait for the entire HTML document to be loaded
         document.addEventListener('DOMContentLoaded', function() {
             
-            // --- 0. SET UP DEMO CART (as you requested) ---
-            if (!localStorage.getItem('userCart')) {
-                const demoCart = [
-                    { productID: 'dress001', size: 'M', quantity: 1 },
-                    { productID: 'top002', size: 'S', quantity: 2 },
-                ];
-                saveCart(demoCart);
-            }
+            // // --- 0. SET UP DEMO CART (as you requested) ---
+            // if (!localStorage.getItem('userCart')) {
+            //     const demoCart = [
+            //         { productID: 'dress001', size: 'M', quantity: 1 },
+            //         { productID: 'top002', size: 'S', quantity: 2 },
+            //     ];
+            //     saveCart(demoCart);
+            // }
 
             // --- 1. GET ALL ELEMENT REFERENCES ---
             const quantityInput = document.getElementById('Quantity');
