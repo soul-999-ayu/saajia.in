@@ -3238,7 +3238,7 @@ Shopify.routes.root = "../../../index.html";</script>
     <script>
         // --- CONFIGURATION ---
         const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRPzuepFBSY02kJk7iycuxLwq_w9_yekodZ09tvGwqJTHdA0eQw61_hJ2FstEROBuXkAvGQr87MVQqh/pub?gid=0&single=true&output=csv'; // For reading products
-        const razorpayKeyId = '1'; // <<< --- REPLACE with your Razorpay Key ID
+        const razorpayKeyId = 'rzp_live_RQVkiXGpDrhUf0'; // <<< --- REPLACE with your Razorpay Key ID
         const emailJsUserId = 'mxNsWtAJnspaqkigw'; // <<< --- REPLACE with your EmailJS User ID
         const emailJsServiceId = 'service_uzrry4c'; // <<< --- REPLACE with your EmailJS Service ID
         const emailJsTemplateId = 'template_qs6aqcs'; // <<< --- REPLACE with your EmailJS Template ID
@@ -3518,7 +3518,7 @@ Shopify.routes.root = "../../../index.html";</script>
 
     const options = {
         key: razorpayKeyId,
-        amount: Math.round(finalTotal * 100), // This should be (cartSubtotal + shippingCost) * 100
+        amount: 1 // This should be (cartSubtotal + shippingCost) * 100
         currency: "INR",
         name: "Saajia",
         description: "Order Payment",
