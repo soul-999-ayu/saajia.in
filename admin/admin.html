@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+        }
+        /* Tab styling */
+        .tab-btn.active {
+            border-bottom-color: #4f46e5;
+            color: #4f46e5;
+        }
+        /* Hide content by default */
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        
+        /* Password Modal Styles */
+        #password-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+        }
+        #password-modal.hidden {
+            display: none;
+        }
+
+        /* Simple loading spinner */
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-left-color: #4f46e5;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Ensure table layout is fixed for consistent column widths */
+        table {
+            table-layout: fixed;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Password Modal -->
+    <div id="password-modal" class="antialiased">
+        <div class="bg-white p-8 rounded-lg shadow-xl w-full max-w-sm">
+            <h2 class="text-2xl font-bold text-center text-gray-800 mb-4">Saajia Admin Login</h2>
+            <form id="login-form">
+                <div class="mb-4">
+                    <label for="password-input" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                    <input type="password" id="password-input" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                </div>
+                <p id="password-error" class="text-red-500 text-sm mb-4 hidden">Incorrect password. Please try again.</p>
+                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300">
+                    Login
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Admin Dashboard Content (Hidden by default) -->
+    <div id="dashboard-content" class="container mx-auto p-4 sm:p-6 lg:p-8 hidden">
+        <h1 class="text-3xl font-bold text-gray-900 mb-6">Order Dashboard</h1>
+
+        <!-- Tabs -->
+        <div class="mb-4 border-b border-gray-200">
+            <nav class="flex space-x-8" aria-label="Tabs">
+                <button id="tab-pending" class="tab-btn active whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm text-gray-500 hover:border-gray-300 hover:text-gray-700">
+                    Pending Orders
+                </button>
+                <button id="tab-delivered" class="tab-btn whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm text-gray-500 hover:border-gray-300 hover:text-gray-700">
+                    Delivered Orders
+                </button>
+            </nav>
+        </div>
+
+        <!-- Loading / Error / Empty States -->
+        <div id="loading-state" class="text-center p-10 hidden">
+            <div class="spinner mx-auto"></div>
+            <p class="mt-4 text-gray-600">Loading orders...</p>
+        </div>
+        <div id="error-state" class="text-center p-10 bg-red-50 border border-red-200 rounded-lg hidden">
+            <h3 class="text-lg font-medium text-red-800">Failed to load orders</h3>
+            <p id="error-message" class="mt-2 text-red-700"></p>
+        </div>
+        <div id="empty-state" class="text-center p-10 bg-white rounded-lg shadow-sm hidden">
+            <p class="text-gray-600">No orders found in this category.</p>
+        </div>
+
+        <!-- Content Panels -->
+        <div id="content-pending" class="tab-content active">
+            <div class="overflow-x-auto bg-white rounded-lg shadow">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="w-1/6 px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Timestamp</th>
+                            <th class="w-1/6 px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Customer</th>
+                            <th class="w-2/6 px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Items</th>
+                            <th class="w-1/6 px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Total</th>
+                            <th class="w-1/6 px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                            <th class="w-1/6 px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pending-orders-table" class="bg-white divide-y divide-gray-200">
+                        <!-- Rows will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="content-delivered" class="tab-content">
+             <div class="overflow-x-auto bg-white rounded-lg shadow">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="w-1/6 px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Timestamp</th>
+                            <th class="w-1/6 px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Customer</th>
+                            <th class="w-2/6 px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Items</th>
+                            <th class="w-1/6 px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Total</th>
+                            <th class="w-1/6 px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                            <th class="w-1/6 px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="delivered-orders-table" class="bg-white divide-y divide-gray-200">
+                        <!-- Rows will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // --- CONFIGURATION ---
+        const appsScriptUrl = 'https://script.google.com/macros/s/AKfycbyEMVPTXITP6cE-SBBUGKDJKmQArltdz7yEMd4bCvWxSIu9PIAM9d_wU7lHJMN42GwcNA/exec'; // <<< --- IMPORTANT: Replace this
+        const ADMIN_PASSWORD = 'JasleenKaur@saajia.in'; // (Optional) Change this password
+        
+        // --- DOM ELEMENTS ---
+        const loginForm = document.getElementById('login-form');
+        const passwordInput = document.getElementById('password-input');
+        const passwordError = document.getElementById('password-error');
+        const passwordModal = document.getElementById('password-modal');
+        const dashboardContent = document.getElementById('dashboard-content');
+        
+        const loadingState = document.getElementById('loading-state');
+        const errorState = document.getElementById('error-state');
+        const errorMessage = document.getElementById('error-message');
+        const emptyState = document.getElementById('empty-state');
+        
+        const tabs = {
+            pending: document.getElementById('tab-pending'),
+            delivered: document.getElementById('tab-delivered'),
+        };
+        const contents = {
+            pending: document.getElementById('content-pending'),
+            delivered: document.getElementById('content-delivered'),
+        };
+        const tables = {
+            pending: document.getElementById('pending-orders-table'),
+            delivered: document.getElementById('delivered-orders-table'),
+        };
+
+        // --- PASSWORD & LOGIN ---
+        
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const password = passwordInput.value;
+            
+            if (password === ADMIN_PASSWORD) {
+                // Correct password
+                passwordModal.classList.add('hidden'); // Hide modal
+                dashboardContent.classList.remove('hidden'); // Show dashboard
+                loadOrders(); // Load orders
+            } else {
+                // Incorrect password
+                passwordError.classList.remove('hidden');
+                passwordInput.focus();
+            }
+        });
+
+
+        // --- TAB SWITCHING ---
+        
+        tabs.pending.addEventListener('click', () => switchTab('pending'));
+        tabs.delivered.addEventListener('click', () => switchTab('delivered'));
+
+        function switchTab(activeTab) {
+            // Deactivate all
+            Object.values(tabs).forEach(tab => tab.classList.remove('active', 'border-indigo-500', 'text-indigo-600'));
+            Object.values(contents).forEach(content => content.classList.remove('active'));
+
+            // Activate the selected one
+            tabs[activeTab].classList.add('active', 'border-indigo-500', 'text-indigo-600');
+            contents[activeTab].classList.add('active');
+            
+            // Re-check empty state for the now-active tab
+            checkEmptyState(activeTab);
+        }
+
+        // --- DATA FETCHING & RENDERING ---
+
+        let allOrders = []; // Cache for all orders
+        
+        async function loadOrders() {
+            loadingState.classList.remove('hidden');
+            errorState.classList.add('hidden');
+            emptyState.classList.add('hidden');
+            tables.pending.innerHTML = '';
+            tables.delivered.innerHTML = '';
+
+            if (appsScriptUrl === 'YOUR_DEPLOYED_ADMIN_SCRIPT_URL_HERE') {
+                showError('The Google Apps Script URL has not been set in the admin.html file.');
+                return;
+            }
+
+            try {
+                const response = await fetch(`${appsScriptUrl}?action=getOrders&v=${new Date().getTime()}`);
+                if (!response.ok) {
+                    throw new Error(`Network response was not ok. Status: ${response.status}`);
+                }
+                const data = await response.json();
+                if (data.status === 'error') {
+                    throw new Error(data.message);
+                }
+
+                allOrders = data.orders;
+                renderOrders(allOrders);
+                
+            } catch (error) {
+                console.error('Error loading orders:', error);
+                showError(error.message);
+            }
+        }
+
+        function renderOrders(orders) {
+            loadingState.classList.add('hidden');
+            tables.pending.innerHTML = '';
+            tables.delivered.innerHTML = '';
+
+            const pendingOrders = orders.filter(order => order.Status !== 'Delivered');
+            const deliveredOrders = orders.filter(order => order.Status === 'Delivered');
+
+            // Render Pending Orders
+            if (pendingOrders.length > 0) {
+                pendingOrders.forEach(order => {
+                    const row = createOrderRow(order, true);
+                    tables.pending.appendChild(row);
+                });
+            }
+            
+            // Render Delivered Orders
+            if (deliveredOrders.length > 0) {
+                 deliveredOrders.forEach(order => {
+                    const row = createOrderRow(order, false); // 'false' for not pending
+                    tables.delivered.appendChild(row);
+                });
+            }
+
+            // Check empty state for the *currently active* tab
+            const activeTab = tabs.pending.classList.contains('active') ? 'pending' : 'delivered';
+            checkEmptyState(activeTab);
+        }
+        
+        function checkEmptyState(activeTab) {
+             emptyState.classList.add('hidden'); // Hide by default
+             
+             if (activeTab === 'pending' && tables.pending.children.length === 0) {
+                 emptyState.classList.remove('hidden');
+             } else if (activeTab === 'delivered' && tables.delivered.children.length === 0) {
+                 emptyState.classList.remove('hidden');
+             }
+        }
+        
+        function createOrderRow(order, isPending) {
+            const row = document.createElement('tr');
+            row.id = `order-${order.Row}`; // Use row number as unique ID
+            
+            // Format timestamp
+            const timestamp = new Date(order.Timestamp).toLocaleString('en-IN', {
+                day: '2-digit', 
+                month: 'short', 
+                year: 'numeric', 
+                hour: '2-digit', 
+                minute: '2-digit'
+            });
+
+            // --- MODIFIED: Added Address and Pincode to customerHtml ---
+            const customerHtml = `
+                <div class="font-medium text-gray-900">${order.Name || 'N/A'}</div>
+                <div class="text-gray-500">${order.Phone || ''}</div>
+                <div class="text-gray-500">${order.Email || ''}</div>
+                <div class="text-xs text-gray-500 mt-1">${order.Address || 'No Address'}</div>
+                <div class="text-xs text-gray-500">Pincode: ${order.Pincode || 'N/A'}</div>
+            `;
+            // --- END MODIFICATION ---
+            
+            // Format items
+            const itemsList = (order.Items || 'N/A').split('\n');
+            const itemsHtml = itemsList.map(item => 
+                `<div class="text-sm text-gray-800">${item}</div>`
+            ).join('');
+            const orderSummary = itemsList[0] + (itemsList.length > 1 ? '...' : '');
+
+
+            // --- 1. Build common columns ---
+            let rowHtml = `
+                <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-600">${timestamp}</td>
+                <td class="px-4 py-4 whitespace-normal text-sm">${customerHtml}</td> <!-- Changed to whitespace-normal -->
+                <td class="px-4 py-4 whitespace-normal text-sm">${itemsHtml}</td> <!-- Changed to whitespace-normal -->
+                <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${order.TotalAmount || 'N/A'}</td>
+            `;
+            
+            // --- 2. Status Column ---
+            if (isPending) {
+                // For Pending tab: Show dropdown
+                const statusOptions = ['Order Placed', 'Shipped', 'Delivered']
+                    .map(status => 
+                        `<option value="${status}" ${order.Status === status ? 'selected' : ''}>${status}</option>`
+                    ).join('');
+                
+                rowHtml += `
+                    <td class="px-4 py-4 whitespace-nowrap text-sm">
+                        <select data-row="${order.Row}" class="status-select p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            ${statusOptions}
+                        </select>
+                    </td>
+                `;
+            } else {
+                // For Delivered tab: Show text
+                rowHtml += `<td class="px-4 py-4 whitespace-nowrap text-sm text-green-700 font-medium">${order.Status}</td>`;
+            }
+
+            // --- 3. Actions Column (Notify Button) ---
+            
+            // Format the status text
+            const statusText = order.Status || '';
+            const formattedStatus = (statusText.toLowerCase() === 'order placed') 
+                                      ? 'placed' 
+                                      : statusText.toLowerCase(); // "shipped" or "delivered"
+
+            let whatsappMsg = '';
+            
+            // Create a different message based on the status
+            if (order.Status === 'Delivered') {
+                whatsappMsg = `Dear ${order.Name},\n\nYour order from Saajia has been successfully delivered!\n\nOrder: ${orderSummary}\nPayment ID: ${order.PaymentID}\n\nThank you for shopping with us! We hope you love your items.`;
+            } else {
+                // Use the message for "Order Placed" or "Shipped"
+                whatsappMsg = `Dear ${order.Name},\n\nYour order at Saajia has been ${formattedStatus}!\n\nOrder: ${orderSummary}\nPayment ID: ${order.PaymentID}\n\nWe will send tracking details soon.\nThank you for shopping with us!`;
+            }
+            
+            const whatsappUrl = `https://wa.me/${order.Phone}?text=${encodeURIComponent(whatsappMsg)}`;
+
+            rowHtml += `
+                <td class="px-4 py-4 whitespace-nowrap text-sm text-center">
+                    <a href="${whatsappUrl}" target="_blank" class="inline-flex items-center px-3 py-1.5 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500" title="Send WhatsApp Message">
+                        Notify user
+                    </a>
+                </td>
+            `;
+            
+            row.innerHTML = rowHtml;
+
+            // Add event listener to the select dropdown if it exists
+            const select = row.querySelector('.status-select');
+            if (select) {
+                select.addEventListener('change', (e) => {
+                    const newStatus = e.target.value;
+                    const rowId = e.target.dataset.row;
+                    updateOrderStatus(rowId, newStatus, e.target);
+                });
+            }
+            
+            return row;
+        }
+
+        async function updateOrderStatus(rowId, newStatus, selectElement) {
+            console.log(`Updating row ${rowId} to status ${newStatus}`);
+            selectElement.disabled = true; // Disable dropdown during update
+            
+            try {
+                const response = await fetch(appsScriptUrl, {
+                    method: 'POST',
+                    mode: 'no-cors', // Use no-cors for simple POST
+                    headers: {
+                        'Content-Type': 'text/plain;charset=utf-8', // Use text/plain for no-cors
+                    },
+                    body: JSON.stringify({
+                        action: 'updateStatus',
+                        row: rowId,
+                        status: newStatus
+                    })
+                });
+
+                // Note: With no-cors, we can't read the response. We assume success.
+                console.log('Update request sent. Reloading orders to confirm.');
+                
+                // Find the order in our cached array and update its status
+                const orderIndex = allOrders.findIndex(o => o.Row == rowId);
+                if (orderIndex > -1) {
+                    allOrders[orderIndex].Status = newStatus;
+                }
+                
+                // Re-render both tables with the updated local data
+                renderOrders(allOrders);
+
+            } catch (error) {
+                console.error('Error updating status:', error);
+                alert(`Failed to update status: ${error.message}`);
+                selectElement.disabled = false; // Re-enable on error
+            }
+        }
+        
+        function showError(message) {
+            loadingState.classList.add('hidden');
+            errorMessage.textContent = message;
+            errorState.classList.remove('hidden');
+        }
+
+    </script>
+</body>
+</html>
+
