@@ -738,6 +738,28 @@ Shopify.routes.root = "index.html";</script>
 }
 </style>
 
+<style>
+    /* ... (your existing modal and spinner styles) ... */
+
+    /* --- ADDED FOR HEADER FIX (REVISED) --- */
+    
+    /* Fix 1: Hide horizontal scrollbar caused by vw/overflow conflicts */
+    body {
+        overflow-x: hidden !important;
+    }
+    
+    /* Fix 2: Force header navigation padding to override Tailwind reset */
+    /* Your header has class "size-header-small", so we use 24px */
+    .section-header .site-nav__link {
+         padding-top: 24px !important;
+         padding-bottom: 24px !important;
+    }
+
+    /* --- END HEADER FIX --- */
+</style>
+
+<!-- By adding `overflow-x: hidden;` to the `body`, we remove that annoying horizontal scrollbar. By explicitly setting the `padding-top` and `padding-bottom` on the navigation links, we override Tailwind's reset and restore your header's original alignment. -->
+
 </head>
   <body class="template-index body-theme ">
     <div id="popup-overlay">
