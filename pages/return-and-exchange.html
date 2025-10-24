@@ -2717,7 +2717,7 @@ Shopify.routes.root = "../../../index.html";</script>
 </a> -->
 
 <link href="cart.html" rel="stylesheet" type="text/css" media="all" />
-  <span onclick="window.location.href = 'cart.html'" class="site-header__link site-header__cart" data-cartmini="true">
+  <span id="cart-icon-link" class="site-header__link site-header__cart js-mini-cart cardraw" data-cartmini="true" style="cursor: pointer;">
     <span class="js-toggle-cart header-cart-icon" title="Your Cart">
       <span class="icon__fallback-text">Cart</span>
 <svg class="svg-cart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -4128,6 +4128,24 @@ function updateComplexImage(containerId, newImageUrl) {
 
 // Run the function when the page has finished loading
 document.addEventListener('DOMContentLoaded', loadProductDetails);
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const cartIconLink = document.getElementById('cart-icon-link');
+    
+    if (cartIconLink) {
+      cartIconLink.addEventListener('click', function(event) {
+        // Stop all other JavaScript 'click' events from running
+        event.preventDefault();
+        event.stopPropagation();
+        
+        // Now, do what you want
+        window.location.href = 'cart.html'; 
+        
+      }, true); // Use 'true' for capture phase to run this *before* other scripts
+    }
+  });
 </script>
 
 <!-- Mirrored from kashique.in/collections/azure/products/azure-co-ord-set by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 19 Sep 2025 02:07:17 GMT -->
