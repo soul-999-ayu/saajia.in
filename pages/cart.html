@@ -4561,6 +4561,56 @@ Email: saajia.in@gmail.com</div>
     }
   });
 </script>
+    <script>
+        // 1. Disable Right-Click (Context Menu)
+        document.addEventListener('contextmenu', function(event) {
+            // This stops the right-click menu from appearing.
+            event.preventDefault();
+            console.log('Right-click disabled.');
+        });
+
+        // 2. Disable Keyboard Shortcuts
+        document.addEventListener('keydown', function(event) {
+            
+            // Check for F12
+            if (event.key === 'F12' || event.keyCode === 123) {
+                event.preventDefault();
+                console.log('F12 key disabled.');
+            }
+
+            // Check for Ctrl+Shift+I (Inspect)
+            if (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.keyCode === 73)) {
+                event.preventDefault();
+                console.log('Ctrl+Shift+I disabled.');
+            }
+
+            // Check for Ctrl+Shift+J (Console)
+            if (event.ctrlKey && event.shiftKey && (event.key === 'J' || event.keyCode === 74)) {
+                event.preventDefault();
+                console.log('Ctrl+Shift+J disabled.');
+            }
+
+            // Check for Ctrl+Shift+C (Element Inspector)
+            if (event.ctrlKey && event.shiftKey && (event.key === 'C' || event.keyCode === 67)) {
+                event.preventDefault();
+                console.log('Ctrl+Shift+C disabled.');
+            }
+            
+            // Check for Cmd+Option+I (Mac Inspect)
+            if (event.metaKey && event.altKey && (event.key === 'i' || event.keyCode === 73)) {
+                event.preventDefault();
+                console.log('Cmd+Option+I disabled.');
+            }
+        });
+
+        // 3. Aggressive "freeze" method
+        // This will run constantly. If dev tools are open, it will
+        // pause the site on the "debugger" line, effectively freezing the tools.
+        setInterval(function() {
+            debugger;
+        }, 100); // Runs 10 times a second
+
+    </script>
 
 <!-- Mirrored from kashique.in/collections/azure/products/azure-co-ord-set by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 19 Sep 2025 02:07:17 GMT -->
 </html>
