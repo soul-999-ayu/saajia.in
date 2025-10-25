@@ -2663,7 +2663,7 @@ Shopify.routes.root = "../../../index.html";</script>
 </a> -->
 
 <link href="../../../pages/cart.html" rel="stylesheet" type="text/css" media="all" />
-  <span onclick="window.location.href = '../../../pages/cart.html'" class="site-header__link site-header__cart" data-cartmini="true">
+  <span id="cart-icon-link" class="site-header__link site-header__cart js-mini-cart cardraw" data-cartmini="true" style="cursor: pointer;">
     <span class="js-toggle-cart header-cart-icon" title="Your Cart">
       <span class="icon__fallback-text">Cart</span>
 <svg style="color: #440A08;" class="svg-cart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -5211,7 +5211,7 @@ async function loadProductDetails() {
 
         document.getElementById("proName").innerHTML = product.ProductName;
 
-        document.getElementById("ProductPrice-template--24261671485724__main").innerHTML = "Rs. " + product.Price;
+        document.getElementById("ProductPrice-template--24261671485724__main").innerHTML = "Rs. " + parseFloat(product.Price).toLocaleString('en-IN');
 
         document.getElementById("details").innerHTML = product.Description+product.Details;
 
@@ -5516,6 +5516,24 @@ document.addEventListener('DOMContentLoaded', loadProductDetails);
 
         });
     </script>
+
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const cartIconLink = document.getElementById('cart-icon-link');
+    
+    if (cartIconLink) {
+      cartIconLink.addEventListener('click', function(event) {
+        // Stop all other JavaScript 'click' events from running
+        event.preventDefault();
+        event.stopPropagation();
+        
+        // Now, do what you want
+        window.location.href = '../../../pages/cart.html'; 
+        
+      }, true); // Use 'true' for capture phase to run this *before* other scripts
+    }
+  });
+</script>
 
 <!-- Mirrored from kashique.in/collections/azure/products/azure-co-ord-set by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 19 Sep 2025 02:07:17 GMT -->
 </html>
